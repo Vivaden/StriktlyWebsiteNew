@@ -75,27 +75,27 @@ const PricingSection = () => {
   
   // Define features arrays with translations
   const starterFeatures = [
-    "100 documents per month",
-    "PEPPOL compliance",
-    "Basic document management",
-    "Email support"
+    t('pricing.feature.docs100'),
+    t('pricing.feature.peppol'),
+    t('pricing.feature.basic'),
+    t('pricing.feature.emailSupport')
   ];
   
   const businessFeatures = [
-    "500 documents per month",
-    "PEPPOL compliance",
-    "Advanced document management",
-    "Accountant export features",
-    "Priority email & chat support"
+    t('pricing.feature.docs500'),
+    t('pricing.feature.peppol'),
+    t('pricing.feature.advanced'),
+    t('pricing.feature.accountant'),
+    t('pricing.feature.prioritySupport')
   ];
   
   const enterpriseFeatures = [
-    "Unlimited documents",
-    "PEPPOL compliance",
-    "Advanced document management",
-    "Advanced integrations",
-    "24/7 priority support",
-    "Dedicated account manager"
+    t('pricing.feature.docsUnlimited'),
+    t('pricing.feature.peppol'),
+    t('pricing.feature.advanced'),
+    t('pricing.feature.integrations'),
+    t('pricing.feature.24support'),
+    t('pricing.feature.dedicated')
   ];
   
   return (
