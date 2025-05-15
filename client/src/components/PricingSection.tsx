@@ -145,7 +145,7 @@ const PricingSection = () => {
         'Advanced integrations',
         '24/7 priority support',
         'Dedicated account manager',
-        'Multiple entities in a single platform'
+        'Multiple entities in a single platform (+€40/entity)'
       ]
     },
     nl: {
@@ -169,7 +169,7 @@ const PricingSection = () => {
         'Geavanceerde integraties',
         '24/7 prioriteit ondersteuning',
         'Toegewijde accountmanager',
-        'Mogelijkheid tot meerdere entiteiten in 1 platform'
+        'Mogelijkheid tot meerdere entiteiten in 1 platform (+€40/entiteit)'
       ]
     }
   };
