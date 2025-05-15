@@ -30,7 +30,9 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
 
   // Translation function
   const t = (key: string): string => {
-    return translations[language][key] || translations['en'][key] || key;
+    const currentTranslations = translations[language] as Record<string, string>;
+    const defaultTranslations = translations['en'] as Record<string, string>;
+    return currentTranslations[key] || defaultTranslations[key] || key;
   };
 
   return (

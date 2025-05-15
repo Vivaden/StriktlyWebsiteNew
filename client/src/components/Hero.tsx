@@ -2,8 +2,10 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section className="pt-12 pb-20 md:py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -16,25 +18,25 @@ const Hero = () => {
           >
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-900">
-                Fast and low-cost PEPPOL compliance for your business
+                {t('hero.title')}
               </h1>
               <p className="text-xl text-gray-600 max-w-2xl">
-                Streamline your invoice management with zero changes to your current workflow. Get compliant in minutes, not months.
+                {t('hero.subtitle')}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Button size="lg" asChild>
-                <Link href="/contact">Book a Demo</Link>
+                <Link href="/contact">{t('hero.cta.primary')}</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/pricing">View Pricing</Link>
+                <Link href="/pricing">{t('hero.cta.secondary')}</Link>
               </Button>
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-500">
               <CheckCircle className="h-5 w-5 text-green-500" />
-              <span>Expert-guided personalized demo</span>
+              <span>{t('hero.feature1')}</span>
               <span className="mx-2">•</span>
-              <span>Custom implementation</span>
+              <span>{t('hero.feature2')}</span>
             </div>
           </motion.div>
           <motion.div 
