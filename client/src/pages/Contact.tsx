@@ -17,8 +17,72 @@ interface FormData {
 }
 
 const Contact = () => {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
   const { toast } = useToast();
+  
+  // Translations
+  const translations = {
+    en: {
+      pageTitle: "Get in Touch",
+      pageSubtitle: "We're here to help with any questions about our PEPPOL solutions.",
+      getInTouch: "Get in Touch",
+      getInTouchDescription: "Have questions about Striktly or our PEPPOL solutions? We'd love to hear from you. Contact us using any of the methods below.",
+      phone: "Phone",
+      email: "Email",
+      office: "Our Office",
+      hours: "Business Hours",
+      weekdayHours: "Monday - Friday: 9:00 AM - 6:00 PM CET",
+      weekendHours: "Closed on weekends and holidays",
+      formTitle: "Send us a Message",
+      formName: "Name",
+      formEmail: "Email",
+      formCompany: "Company",
+      formPhone: "Phone (optional)",
+      formRequestType: "Request Type",
+      formRequestTypeGeneral: "General Inquiry",
+      formRequestTypeDemo: "Request a Demo",
+      formRequestTypePricing: "Pricing Information",
+      formRequestTypeSupport: "Support",
+      formMessage: "Message",
+      formSending: "Sending...",
+      formSend: "Send Message",
+      demoTitle: "Schedule a Personalized Demo",
+      demoDescription: "See how Striktly can streamline your PEPPOL invoice management with a customized demonstration.",
+      scheduleDemo: "Schedule Demo"
+    },
+    nl: {
+      pageTitle: "Neem Contact Op",
+      pageSubtitle: "We zijn er om u te helpen met vragen over onze PEPPOL-oplossingen.",
+      getInTouch: "Neem Contact Op",
+      getInTouchDescription: "Heeft u vragen over Striktly of onze PEPPOL-oplossingen? We horen graag van u. Neem contact met ons op via een van de onderstaande methoden.",
+      phone: "Telefoon",
+      email: "E-mail",
+      office: "Ons Kantoor",
+      hours: "Openingstijden",
+      weekdayHours: "Maandag - Vrijdag: 9:00 - 18:00 CET",
+      weekendHours: "Gesloten in weekenden en op feestdagen",
+      formTitle: "Stuur ons een Bericht",
+      formName: "Naam",
+      formEmail: "E-mail",
+      formCompany: "Bedrijf",
+      formPhone: "Telefoon (optioneel)",
+      formRequestType: "Type Aanvraag",
+      formRequestTypeGeneral: "Algemene Vraag",
+      formRequestTypeDemo: "Demo Aanvragen",
+      formRequestTypePricing: "Prijsinformatie",
+      formRequestTypeSupport: "Ondersteuning",
+      formMessage: "Bericht",
+      formSending: "Versturen...",
+      formSend: "Bericht Versturen",
+      demoTitle: "Plan een Gepersonaliseerde Demo",
+      demoDescription: "Ontdek hoe Striktly uw PEPPOL-factuurbeheer kan stroomlijnen met een op maat gemaakte demonstratie.",
+      scheduleDemo: "Demo Inplannen"
+    }
+  };
+  
+  // Use the appropriate translations based on the current language
+  const texts = translations[language as keyof typeof translations] || translations.en;
+  
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -81,7 +145,7 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                {t('page.contact.title')}
+                {texts.pageTitle}
               </motion.h1>
               <motion.p 
                 className="text-xl text-gray-600 mb-8"
@@ -89,7 +153,7 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                {t('page.contact.subtitle')}
+                {texts.pageSubtitle}
               </motion.p>
             </div>
           </div>
@@ -106,8 +170,8 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">{t('contact.page.getintouch')}</h2>
-                <p className="text-lg text-gray-600 mb-8">{t('contact.page.getintouch.description')}</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">{texts.getInTouch}</h2>
+                <p className="text-lg text-gray-600 mb-8">{texts.getInTouchDescription}</p>
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -115,7 +179,7 @@ const Contact = () => {
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">{t('contact.page.phone')}</h3>
+                      <h3 className="text-lg font-medium text-gray-900">{texts.phone}</h3>
                       <p className="text-gray-600">+1 (555) 123-4567</p>
                     </div>
                   </div>
@@ -125,7 +189,7 @@ const Contact = () => {
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">{t('contact.page.email')}</h3>
+                      <h3 className="text-lg font-medium text-gray-900">{texts.email}</h3>
                       <p className="text-gray-600">info@striktly.com</p>
                       <p className="text-gray-600">support@striktly.com</p>
                     </div>
@@ -136,7 +200,7 @@ const Contact = () => {
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">{t('contact.page.office')}</h3>
+                      <h3 className="text-lg font-medium text-gray-900">{texts.office}</h3>
                       <p className="text-gray-600">123 Business Avenue</p>
                       <p className="text-gray-600">Technology Park, Suite 456</p>
                       <p className="text-gray-600">Amsterdam, Netherlands</p>
@@ -148,9 +212,9 @@ const Contact = () => {
                       <Clock className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">{t('contact.page.hours')}</h3>
-                      <p className="text-gray-600">{t('contact.page.hours.weekdays')}</p>
-                      <p className="text-gray-600">{t('contact.page.hours.weekend')}</p>
+                      <h3 className="text-lg font-medium text-gray-900">{texts.hours}</h3>
+                      <p className="text-gray-600">{texts.weekdayHours}</p>
+                      <p className="text-gray-600">{texts.weekendHours}</p>
                     </div>
                   </div>
                 </div>
@@ -164,10 +228,10 @@ const Contact = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.page.form.title')}</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">{texts.formTitle}</h2>
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700">{t('contact.page.form.name')} *</label>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700">{texts.formName} *</label>
                       <input 
                         type="text" 
                         id="name" 
@@ -180,7 +244,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">{t('contact.page.form.email')} *</label>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">{texts.formEmail} *</label>
                       <input 
                         type="email" 
                         id="email" 
@@ -194,7 +258,7 @@ const Contact = () => {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="company" className="block text-sm font-medium text-gray-700">{t('contact.page.form.company')} *</label>
+                        <label htmlFor="company" className="block text-sm font-medium text-gray-700">{texts.formCompany} *</label>
                         <input 
                           type="text" 
                           id="company" 
@@ -207,7 +271,7 @@ const Contact = () => {
                       </div>
                       
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700">{t('contact.page.form.phone')}</label>
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700">{texts.formPhone}</label>
                         <input 
                           type="tel" 
                           id="phone" 
@@ -220,7 +284,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="requestType" className="block text-sm font-medium text-gray-700">{t('contact.page.form.requestType')}</label>
+                      <label htmlFor="requestType" className="block text-sm font-medium text-gray-700">{texts.formRequestType}</label>
                       <select 
                         id="requestType" 
                         name="requestType" 
@@ -228,15 +292,15 @@ const Contact = () => {
                         onChange={handleChange}
                         className="mt-1 block w-full py-3 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
                       >
-                        <option value="general">{t('contact.page.form.requestType.general')}</option>
-                        <option value="demo">{t('contact.page.form.requestType.demo')}</option>
-                        <option value="pricing">{t('contact.page.form.requestType.pricing')}</option>
-                        <option value="support">{t('contact.page.form.requestType.support')}</option>
+                        <option value="general">{texts.formRequestTypeGeneral}</option>
+                        <option value="demo">{texts.formRequestTypeDemo}</option>
+                        <option value="pricing">{texts.formRequestTypePricing}</option>
+                        <option value="support">{texts.formRequestTypeSupport}</option>
                       </select>
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700">{t('contact.page.form.message')} *</label>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700">{texts.formMessage} *</label>
                       <textarea 
                         id="message" 
                         name="message" 
@@ -254,7 +318,7 @@ const Contact = () => {
                         className="w-full"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? t('cta.button.sending') : t('cta.button.send')}
+                        {isSubmitting ? texts.formSending : texts.formSend}
                       </Button>
                     </div>
                   </form>
@@ -270,9 +334,9 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t('contact.page.demo.title')}</h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">{t('contact.page.demo.description')}</p>
-              <Button size="lg">{t('cta.button.schedule')}</Button>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{texts.demoTitle}</h2>
+              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">{texts.demoDescription}</p>
+              <Button size="lg">{texts.scheduleDemo}</Button>
             </motion.div>
           </div>
         </section>
