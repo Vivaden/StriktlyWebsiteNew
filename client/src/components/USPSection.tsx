@@ -101,7 +101,13 @@ const USPSection = () => {
           />
 
           {/* Additional Info Card */}
-          <div className="bg-gradient-to-br from-primary to-[#6366F1] rounded-xl p-8 shadow-md flex flex-col h-full hover:shadow-lg transition-shadow text-white">
+          <motion.div 
+            className="bg-gradient-to-br from-primary to-[#6366F1] rounded-xl p-8 shadow-md flex flex-col h-full hover:shadow-lg transition-shadow text-white"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+          >
             <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mb-6">
               <Info className="h-6 w-6 text-white" />
             </div>
@@ -113,7 +119,7 @@ const USPSection = () => {
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
               </svg>
             </Link>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
