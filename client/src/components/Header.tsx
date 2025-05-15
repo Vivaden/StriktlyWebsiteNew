@@ -50,9 +50,6 @@ const Header = () => {
               <Link href="/pricing" className={`${location === '/pricing' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
                 {t('nav.pricing')}
               </Link>
-              <Link href="/faq" className={`${location === '/faq' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
-                {t('nav.faq')}
-              </Link>
               <Link href="/contact" className={`${location === '/contact' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
                 {t('nav.contact')}
               </Link>
