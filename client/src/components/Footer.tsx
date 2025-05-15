@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           <div>
             <div className="text-2xl font-bold mb-4">Striktly</div>
             <p className="text-gray-400 mb-6">{t('footer.tagline')}</p>
@@ -26,40 +26,26 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-medium mb-4">{t('footer.product')}</h3>
+            <h3 className="text-lg font-medium mb-4">{t('footer.navigation')}</h3>
             <ul className="space-y-3">
+              <li><Link href="/" className="text-gray-400 hover:text-white">{t('footer.home')}</Link></li>
               <li><Link href="/features" className="text-gray-400 hover:text-white">{t('footer.features')}</Link></li>
               <li><Link href="/pricing" className="text-gray-400 hover:text-white">{t('footer.pricing')}</Link></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.integrations')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.updates')}</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-medium mb-4">{t('footer.resources')}</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.documentation')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.guides')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.support')}</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-lg font-medium mb-4">{t('footer.company')}</h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.about')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.blog')}</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.careers')}</a></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('footer.contact')}</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-medium mb-4">{t('footer.legal')}</h3>
+            <ul className="space-y-3">
+              <li><Link href="/privacy" className="text-gray-400 hover:text-white">{t('footer.privacy')}</Link></li>
+              <li><Link href="/terms" className="text-gray-400 hover:text-white">{t('footer.terms')}</Link></li>
+              <li><Link href="/cookies" className="text-gray-400 hover:text-white">{t('footer.cookies')}</Link></li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400">{t('footer.copyright')}</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white">{t('footer.privacy')}</a>
-              <a href="#" className="text-gray-400 hover:text-white">{t('footer.terms')}</a>
-              <a href="#" className="text-gray-400 hover:text-white">{t('footer.cookies')}</a>
-            </div>
           </div>
         </div>
       </div>

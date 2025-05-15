@@ -261,6 +261,9 @@ export const nl = {
   'footer.privacy': 'Privacybeleid',
   'footer.terms': 'Servicevoorwaarden',
   'footer.cookies': 'Cookiebeleid',
+  'footer.navigation': 'Navigatie',
+  'footer.legal': 'Juridisch',
+  'footer.home': 'Home',
   
   // Language
   'language': 'Taal',

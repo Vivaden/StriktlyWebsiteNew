@@ -261,6 +261,9 @@ export const en = {
   'footer.privacy': 'Privacy Policy',
   'footer.terms': 'Terms of Service',
   'footer.cookies': 'Cookie Policy',
+  'footer.navigation': 'Navigation',
+  'footer.legal': 'Legal',
+  'footer.home': 'Home',
   
   // Language
   'language': 'Language',
