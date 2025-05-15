@@ -35,31 +35,31 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-medium mb-4">Resources</h3>
+            <h3 className="text-lg font-medium mb-4">{t('footer.resources')}</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white">Documentation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Guides</a></li>
-              <li><Link href="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Support</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.documentation')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.guides')}</a></li>
+              <li><Link href="/faq" className="text-gray-400 hover:text-white">{t('footer.faq')}</Link></li>
+              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.support')}</a></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-medium mb-4">Company</h3>
+            <h3 className="text-lg font-medium mb-4">{t('footer.company')}</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-white">About</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Careers</a></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.about')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.blog')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.careers')}</a></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('footer.contact')}</Link></li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400">&copy; {new Date().getFullYear()} Striktly. All rights reserved.</p>
+            <p className="text-gray-400">{t('footer.copyright')}</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white">Terms of Service</a>
-              <a href="#" className="text-gray-400 hover:text-white">Cookie Policy</a>
+              <a href="#" className="text-gray-400 hover:text-white">{t('footer.privacy')}</a>
+              <a href="#" className="text-gray-400 hover:text-white">{t('footer.terms')}</a>
+              <a href="#" className="text-gray-400 hover:text-white">{t('footer.cookies')}</a>
             </div>
           </div>
         </div>
