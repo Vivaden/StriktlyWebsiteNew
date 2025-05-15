@@ -25,10 +25,25 @@ export const en = {
   'how.step3.title': 'Export & Report',
   'how.step3.description': 'Seamlessly export to your accounting system and generate detailed reports.',
   'how.cta': 'Book a Demo',
+  'how.image.alt': 'Striktly document automation flow visualization',
   
   // USP Section
   'usp.title': 'Why Choose Striktly?',
   'usp.subtitle': 'The simplest way to achieve PEPPOL compliance without disrupting your business.',
+  'usp.card1.title': 'Fast and Low-Cost Compliance',
+  'usp.card1.description': 'Get PEPPOL-compliant within minutes at a fraction of the cost of traditional solutions.',
+  'usp.card2.title': 'No Workflow Changes',
+  'usp.card2.description': 'Keep your existing processes intact. Striktly adapts to how you work, not the other way around.',
+  'usp.card3.title': 'Unified Document Management',
+  'usp.card3.description': 'All your invoices and documents managed in one intuitive platform for maximum efficiency.',
+  'usp.card4.title': 'Automatic Accountant Export',
+  'usp.card4.description': 'Seamlessly export your documents to your accountant in their preferred format, saving time and reducing errors.',
+  'usp.card5.title': 'Unlimited Support',
+  'usp.card5.description': 'Access to our expert support team whenever you need assistance, with no limits on inquiries or consultations.',
+  'usp.info.title': 'Need more information?',
+  'usp.info.description': 'Discover how Striktly can be tailored to your specific business needs with a personalized demo.',
+  'usp.info.cta': 'Schedule a Demo',
+  'usp.learn.more': 'Learn more',
   
   // Features
   'features.title': 'Key Features',

@@ -83,13 +83,13 @@ const HowItWorks = () => {
           {/* Document processing automation visualization */}
           <img 
             src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=600" 
-            alt="Striktly document automation flow visualization" 
+            alt={t('how.image.alt')} 
             className="rounded-xl shadow-lg w-full h-auto object-cover max-w-5xl mx-auto" 
           />
           
           <div className="mt-10">
             <Button size="lg" asChild>
-              <Link href="/contact">Book a Demo</Link>
+              <Link href="/contact">{t('how.cta')}</Link>
             </Button>
           </div>
         </motion.div>

@@ -9,6 +9,7 @@ import {
   LifeBuoy, 
   Info 
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Animation variants for staggered animation
 const containerVariants = {

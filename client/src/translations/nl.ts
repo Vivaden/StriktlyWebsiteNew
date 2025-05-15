@@ -25,10 +25,25 @@ export const nl = {
   'how.step3.title': 'Exporteren & Rapporteren',
   'how.step3.description': 'Exporteer naadloos naar uw boekhoudsysteem en genereer gedetailleerde rapporten.',
   'how.cta': 'Demo Aanvragen',
+  'how.image.alt': 'Striktly document automatisering stroom visualisatie',
   
   // USP Section
   'usp.title': 'Waarom Kiezen voor Striktly?',
   'usp.subtitle': 'De eenvoudigste manier om PEPPOL-compliance te bereiken zonder uw bedrijf te verstoren.',
+  'usp.card1.title': 'Snelle en Voordelige Compliance',
+  'usp.card1.description': 'Word PEPPOL-compliant binnen minuten tegen een fractie van de kosten van traditionele oplossingen.',
+  'usp.card2.title': 'Geen Werkstroomwijzigingen',
+  'usp.card2.description': 'Behoud uw bestaande processen. Striktly past zich aan uw manier van werken aan, niet andersom.',
+  'usp.card3.title': 'Gecentraliseerd Documentbeheer',
+  'usp.card3.description': 'Al uw facturen en documenten beheerd in één intuïtief platform voor maximale efficiëntie.',
+  'usp.card4.title': 'Automatische Export naar Accountant',
+  'usp.card4.description': 'Exporteer uw documenten naadloos naar uw accountant in hun gewenste formaat, bespaar tijd en verminder fouten.',
+  'usp.card5.title': 'Onbeperkte Ondersteuning',
+  'usp.card5.description': 'Toegang tot ons expertteam wanneer u hulp nodig heeft, zonder limiet op vragen of consulten.',
+  'usp.info.title': 'Meer informatie nodig?',
+  'usp.info.description': 'Ontdek hoe Striktly kan worden aangepast aan uw specifieke zakelijke behoeften met een persoonlijke demo.',
+  'usp.info.cta': 'Demo Aanvragen',
+  'usp.learn.more': 'Meer informatie',
   
   // Features
   'features.title': 'Belangrijkste Functies',
