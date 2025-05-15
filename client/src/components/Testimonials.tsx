@@ -84,25 +84,6 @@ const Testimonials = () => {
             delay={0.3}
           />
         </div>
-        
-        {/* Trust signals */}
-        <motion.div 
-          className="mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <h3 className="text-lg font-medium text-gray-900 text-center mb-8">Trusted by businesses across industries</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-gray-500">Company 1</div>
-            <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-gray-500">Company 2</div>
-            <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-gray-500">Company 3</div>
-            <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-gray-500">Company 4</div>
-            <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-gray-500">Company 5</div>
-            <div className="h-12 w-32 bg-gray-200 rounded flex items-center justify-center text-gray-500">Company 6</div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
