@@ -75,14 +75,14 @@ const PricingSection = () => {
   
   // Define features arrays with actual translations
   const starterFeatures = [
-    '100 documents per month',
+    '30 documents per month',
     'PEPPOL compliance',
     'Basic document management',
     'Email support'
   ];
   
   const businessFeatures = [
-    '500 documents per month',
+    '75 documents per month',
     'PEPPOL compliance',
     'Advanced document management',
     'Accountant export features',
@@ -128,7 +128,7 @@ const PricingSection = () => {
           <PricingTier 
             title={t('pricing.starter.title')}
             description={t('pricing.starter.description')}
-            price={t('pricing.starter.price')}
+            price="€25"
             features={starterFeatures}
             cta={t('pricing.cta.demo')}
             ctaLink="/contact"
@@ -141,7 +141,7 @@ const PricingSection = () => {
           <PricingTier 
             title={t('pricing.business.title')}
             description={t('pricing.business.description')}
-            price={t('pricing.business.price')}
+            price="€50"
             features={businessFeatures}
             cta={t('pricing.cta.demo')}
             isPopular={true}
@@ -155,7 +155,7 @@ const PricingSection = () => {
           <PricingTier 
             title={t('pricing.enterprise.title')}
             description={t('pricing.enterprise.description')}
-            price={t('pricing.enterprise.price')}
+            price="€100"
             features={enterpriseFeatures}
             cta={t('pricing.cta.sales')}
             ctaLink="/contact"
