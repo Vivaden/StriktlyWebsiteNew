@@ -2,13 +2,14 @@ import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
             <div className="text-2xl font-bold mb-4">Striktly</div>
-            <p className="text-gray-400 mb-6">Fast and low-cost PEPPOL compliance for your business.</p>
+            <p className="text-gray-400 mb-6">{t('footer.tagline')}</p>
             <div className="flex space-x-4">
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                 <span className="sr-only">Twitter</span>
@@ -25,12 +26,12 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-medium mb-4">Product</h3>
+            <h3 className="text-lg font-medium mb-4">{t('footer.product')}</h3>
             <ul className="space-y-3">
-              <li><Link href="/features" className="text-gray-400 hover:text-white">Features</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-white">Pricing</Link></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Integrations</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white">Updates</a></li>
+              <li><Link href="/features" className="text-gray-400 hover:text-white">{t('footer.features')}</Link></li>
+              <li><Link href="/pricing" className="text-gray-400 hover:text-white">{t('footer.pricing')}</Link></li>
+              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.integrations')}</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white">{t('footer.updates')}</a></li>
             </ul>
           </div>
           <div>
