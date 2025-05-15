@@ -4,6 +4,7 @@ import MobileMenu from "./MobileMenu";
 import { Button } from "@/components/ui/button";
 import LanguageSelector from "./LanguageSelector";
 import { useLanguage } from "@/contexts/LanguageContext";
+import striktlyLogo from "../assets/LogoStriktlyWebsite.png";
 
 const Header = () => {
   const [location] = useLocation();
@@ -60,7 +61,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-primary font-bold text-2xl">Striktly</span>
+              <img src={striktlyLogo} alt="Striktly Logo" className="h-10" />
             </Link>
             <nav className="hidden md:flex ml-10 space-x-8">
               <Link href="/" className={`${location === '/' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
