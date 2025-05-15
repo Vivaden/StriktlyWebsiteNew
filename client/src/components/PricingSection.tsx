@@ -144,28 +144,6 @@ const PricingSection = () => {
             delay={0.3}
           />
         </div>
-        
-        {/* Stripe Pricing Table Placeholder */}
-        <motion.div 
-          className="mt-16 p-8 border border-dashed border-gray-300 rounded-lg bg-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <p className="text-center text-gray-500">
-            {/* Stripe Pricing Table Embed Here */}
-            {/* Example: 
-            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
-            <stripe-pricing-table
-              pricing-table-id="your-pricing-table-id"
-              publishable-key="your-publishable-key">
-            </stripe-pricing-table>
-            */}
-          </p>
-        </motion.div>
-        
-
       </div>
     </section>
   );
