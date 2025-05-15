@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import MobileMenu from "./MobileMenu";
 import { Button } from "@/components/ui/button";
+import LanguageSelector from "./LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [location] = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,28 +42,29 @@ const Header = () => {
             </Link>
             <nav className="hidden md:flex ml-10 space-x-8">
               <Link href="/" className={`${location === '/' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
-                Home
+                {t('nav.home')}
               </Link>
               <Link href="/features" className={`${location === '/features' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
-                Features
+                {t('nav.features')}
               </Link>
               <Link href="/pricing" className={`${location === '/pricing' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
-                Pricing
+                {t('nav.pricing')}
               </Link>
               <Link href="/faq" className={`${location === '/faq' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
-                FAQ
+                {t('nav.faq')}
               </Link>
               <Link href="/contact" className={`${location === '/contact' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
-                Contact
+                {t('nav.contact')}
               </Link>
             </nav>
           </div>
           <div className="flex items-center space-x-4">
+            <LanguageSelector />
             <Button variant="outline" className="hidden md:inline-flex" asChild>
               <Link href="/contact">Sign In</Link>
             </Button>
             <Button asChild>
-              <Link href="/contact">Book a Demo</Link>
+              <Link href="/contact">{t('cta.book_demo')}</Link>
             </Button>
           </div>
           <div className="md:hidden flex items-center">
