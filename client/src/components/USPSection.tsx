@@ -55,7 +55,7 @@ const USPSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {/* USP 1 */}
+          {/* USP 1 - Fast Compliance */}
           <FeatureCard 
             icon={<Zap />}
             title={t('usp.card1.title')}
@@ -64,7 +64,7 @@ const USPSection = () => {
             linkUrl="/features"
           />
 
-          {/* USP 2 */}
+          {/* USP 2 - No Workflow Changes */}
           <FeatureCard 
             icon={<ClipboardCopy />}
             title={t('usp.card2.title')}
@@ -73,7 +73,7 @@ const USPSection = () => {
             linkUrl="/features"
           />
 
-          {/* USP 3 */}
+          {/* USP 3 - Centralized Document Management */}
           <FeatureCard 
             icon={<Layers />}
             title={t('usp.card3.title')}
@@ -82,7 +82,7 @@ const USPSection = () => {
             linkUrl="/features"
           />
 
-          {/* USP 4 */}
+          {/* USP 4 - Automatic Exports */}
           <FeatureCard 
             icon={<ServerCog />}
             title={t('usp.card4.title')}
@@ -91,7 +91,7 @@ const USPSection = () => {
             linkUrl="/features"
           />
 
-          {/* USP 5 */}
+          {/* USP 5 - Unlimited Support */}
           <FeatureCard 
             icon={<LifeBuoy />}
             title={t('usp.card5.title')}
