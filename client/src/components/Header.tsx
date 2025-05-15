@@ -58,10 +58,10 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <LanguageSelector />
             <Button variant="outline" className="hidden md:inline-flex" asChild>
-              <Link href="/contact">{t('nav.signin')}</Link>
+              <Link href="/contact">Sign In</Link>
             </Button>
             <Button asChild>
-              <Link href="/contact">{t('cta.book_demo')}</Link>
+              <Link href="/contact">Book a Demo</Link>
             </Button>
           </div>
           <div className="md:hidden flex items-center">

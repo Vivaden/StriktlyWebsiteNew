@@ -30,28 +30,28 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
-          {t('nav.home')}
+          Home
         </Link>
         <Link 
           href="/features" 
           className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/features' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
-          {t('nav.features')}
+          Features
         </Link>
         <Link 
           href="/pricing" 
           className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/pricing' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
-          {t('nav.pricing')}
+          Pricing
         </Link>
         <Link 
           href="/contact" 
           className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/contact' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
-          {t('nav.contact')}
+          Contact
         </Link>
       </div>
     </div>
