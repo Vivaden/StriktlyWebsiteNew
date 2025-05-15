@@ -69,8 +69,8 @@ const Pricing = () => {
               {/* Pricing FAQ items */}
               <div className="space-y-6">
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">What happens after my free trial ends?</h3>
-                  <p className="text-gray-700">After your 14-day free trial, you'll be prompted to select a plan that best fits your needs. We'll never automatically charge you – you must actively choose to continue.</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">How do I get started with Striktly?</h3>
+                  <p className="text-gray-700">Book a demo with our team to discuss your needs. We'll provide a personalized walkthrough of our platform and help determine the best plan for your business.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="font-semibold text-gray-900 mb-2">Can I upgrade or downgrade my plan?</h3>
@@ -81,8 +81,8 @@ const Pricing = () => {
                   <p className="text-gray-700">We accept all major credit cards, including Visa, Mastercard, and American Express. For Enterprise plans, we also offer invoice payment options.</p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="font-semibold text-gray-900 mb-2">How does the money-back guarantee work?</h3>
-                  <p className="text-gray-700">Our 30-day money-back guarantee lets you try Striktly risk-free. If you're not satisfied for any reason within 30 days of your purchase, simply contact us for a full refund, no questions asked.</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">Do you offer custom pricing for specific needs?</h3>
+                  <p className="text-gray-700">Yes, we offer tailored pricing options for businesses with unique requirements. Contact our sales team to discuss your specific needs and we'll create a custom solution for you.</p>
                 </div>
               </div>
             </motion.div>

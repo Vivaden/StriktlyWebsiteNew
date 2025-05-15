@@ -32,9 +32,9 @@ const Hero = () => {
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-500">
               <CheckCircle className="h-5 w-5 text-green-500" />
-              <span>No credit card required</span>
+              <span>Expert-guided personalized demo</span>
               <span className="mx-2">•</span>
-              <span>14-day free trial</span>
+              <span>Custom implementation</span>
             </div>
           </motion.div>
           <motion.div 

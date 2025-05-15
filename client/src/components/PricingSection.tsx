@@ -103,8 +103,8 @@ const PricingSection = () => {
               "Basic document management",
               "Email support"
             ]}
-            cta="Start Free Trial"
-            ctaLink="/pricing"
+            cta="Book a Demo"
+            ctaLink="/contact"
             delay={0.1}
           />
           
@@ -120,9 +120,9 @@ const PricingSection = () => {
               "Accountant export features",
               "Priority email & chat support"
             ]}
-            cta="Start Free Trial"
+            cta="Book a Demo"
             isPopular={true}
-            ctaLink="/pricing"
+            ctaLink="/contact"
             delay={0.2}
           />
           
@@ -165,19 +165,7 @@ const PricingSection = () => {
           </p>
         </motion.div>
         
-        {/* Money-back guarantee */}
-        <motion.div 
-          className="mt-12 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-        >
-          <div className="inline-flex items-center p-4 bg-green-50 rounded-lg">
-            <Shield className="h-6 w-6 text-green-500 mr-2" />
-            <span className="text-green-800 font-medium">30-day money-back guarantee, no questions asked</span>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );

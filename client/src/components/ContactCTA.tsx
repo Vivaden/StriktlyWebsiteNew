@@ -78,17 +78,8 @@ const ContactCTA = () => {
                   <CheckCircle className="h-5 w-5 text-primary" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">14-day free trial</h3>
-                  <p className="text-gray-600">Test all features risk-free with no credit card required.</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
-                  <CheckCircle className="h-5 w-5 text-primary" />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">30-day money-back guarantee</h3>
-                  <p className="text-gray-600">Not satisfied? Get a full refund, no questions asked.</p>
+                  <h3 className="text-lg font-medium text-gray-900">Free personalized demo</h3>
+                  <p className="text-gray-600">Discover how Striktly can work for your specific business needs.</p>
                 </div>
               </div>
               <div className="flex items-start">
