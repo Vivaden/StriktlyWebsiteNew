@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           <div>
             <div className="text-2xl font-bold mb-4">Striktly</div>
-            <p className="text-gray-400 mb-6">Fast and low-cost PEPPOL compliance for your business.</p>
+            <p className="text-gray-400 mb-6">{t('footer.tagline')}</p>
             <div className="flex space-x-4">
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                 <span className="sr-only">Twitter</span>
@@ -26,26 +26,26 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-medium mb-4">Navigation</h3>
+            <h3 className="text-lg font-medium mb-4">{t('footer.navigation')}</h3>
             <ul className="space-y-3">
-              <li><Link href="/" className="text-gray-400 hover:text-white">Home</Link></li>
-              <li><Link href="/features" className="text-gray-400 hover:text-white">Features</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-white">Pricing</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+              <li><Link href="/" className="text-gray-400 hover:text-white">{t('footer.home')}</Link></li>
+              <li><Link href="/features" className="text-gray-400 hover:text-white">{t('footer.features')}</Link></li>
+              <li><Link href="/pricing" className="text-gray-400 hover:text-white">{t('footer.pricing')}</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('footer.contact')}</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-medium mb-4">Legal</h3>
+            <h3 className="text-lg font-medium mb-4">{t('footer.legal')}</h3>
             <ul className="space-y-3">
-              <li><Link href="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
-              <li><Link href="/cookies" className="text-gray-400 hover:text-white">Cookie Policy</Link></li>
+              <li><Link href="/privacy" className="text-gray-400 hover:text-white">{t('footer.privacy')}</Link></li>
+              <li><Link href="/terms" className="text-gray-400 hover:text-white">{t('footer.terms')}</Link></li>
+              <li><Link href="/cookies" className="text-gray-400 hover:text-white">{t('footer.cookies')}</Link></li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400">© 2025 Striktly. All rights reserved.</p>
+            <p className="text-gray-400">{t('footer.copyright')}</p>
           </div>
         </div>
       </div>
