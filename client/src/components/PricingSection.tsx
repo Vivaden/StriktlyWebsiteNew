@@ -73,29 +73,29 @@ const PricingTier: React.FC<PricingTierProps> = ({
 const PricingSection = () => {
   const { t } = useLanguage();
   
-  // Define features arrays with translations
+  // Define features arrays with actual translations
   const starterFeatures = [
-    t('pricing.feature.docs100'),
-    t('pricing.feature.peppol'),
-    t('pricing.feature.basic'),
-    t('pricing.feature.emailSupport')
+    '100 documents per month',
+    'PEPPOL compliance',
+    'Basic document management',
+    'Email support'
   ];
   
   const businessFeatures = [
-    t('pricing.feature.docs500'),
-    t('pricing.feature.peppol'),
-    t('pricing.feature.advanced'),
-    t('pricing.feature.accountant'),
-    t('pricing.feature.prioritySupport')
+    '500 documents per month',
+    'PEPPOL compliance',
+    'Advanced document management',
+    'Accountant export features',
+    'Priority email & chat support'
   ];
   
   const enterpriseFeatures = [
-    t('pricing.feature.docsUnlimited'),
-    t('pricing.feature.peppol'),
-    t('pricing.feature.advanced'),
-    t('pricing.feature.integrations'),
-    t('pricing.feature.24support'),
-    t('pricing.feature.dedicated')
+    'Unlimited documents',
+    'PEPPOL compliance',
+    'Advanced document management',
+    'Advanced integrations',
+    '24/7 priority support',
+    'Dedicated account manager'
   ];
   
   return (
