@@ -16,6 +16,7 @@ interface FormData {
 
 const ContactCTA = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -40,8 +41,8 @@ const ContactCTA = () => {
       await apiRequest('POST', '/api/contact', formData);
       
       toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+        title: t('contact.toast.success.title'),
+        description: t('contact.toast.success.description'),
       });
       
       setFormData({
@@ -52,8 +53,8 @@ const ContactCTA = () => {
       });
     } catch (error) {
       toast({
-        title: "Error sending message",
-        description: "Please try again later or contact us directly.",
+        title: t('contact.toast.error.title'),
+        description: t('contact.toast.error.description'),
         variant: "destructive"
       });
     } finally {
@@ -71,16 +72,16 @@ const ContactCTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Ready to streamline your invoice management?</h2>
-            <p className="text-xl text-gray-600 mb-8">Get started with Striktly today and experience hassle-free PEPPOL compliance with no changes to your current workflow.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t('contact.title')}</h2>
+            <p className="text-xl text-gray-600 mb-8">{t('contact.subtitle')}</p>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
                   <CheckCircle className="h-5 w-5 text-primary" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">Free personalized demo</h3>
-                  <p className="text-gray-600">Discover how Striktly can work for your specific business needs.</p>
+                  <h3 className="text-lg font-medium text-gray-900">{t('contact.feature1.title')}</h3>
+                  <p className="text-gray-600">{t('contact.feature1.description')}</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -88,17 +89,17 @@ const ContactCTA = () => {
                   <CheckCircle className="h-5 w-5 text-primary" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">Unlimited support</h3>
-                  <p className="text-gray-600">Our experts are always available to help you succeed.</p>
+                  <h3 className="text-lg font-medium text-gray-900">{t('contact.feature2.title')}</h3>
+                  <p className="text-gray-600">{t('contact.feature2.description')}</p>
                 </div>
               </div>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Button size="lg" asChild>
-                <Link href="/contact">Book a Demo</Link>
+                <Link href="/contact">{t('contact.cta.primary')}</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/pricing">View Pricing</Link>
+                <Link href="/pricing">{t('contact.cta.secondary')}</Link>
               </Button>
             </div>
           </motion.div>
@@ -111,10 +112,10 @@ const ContactCTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h3 className="text-xl font-bold mb-6 text-gray-900">Contact Us</h3>
+            <h3 className="text-xl font-bold mb-6 text-gray-900">{t('contact.form.title')}</h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">{t('contact.form.name')}</label>
                 <input 
                   type="text" 
                   id="name" 
@@ -126,7 +127,7 @@ const ContactCTA = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">{t('contact.form.email')}</label>
                 <input 
                   type="email" 
                   id="email" 
@@ -138,7 +139,7 @@ const ContactCTA = () => {
                 />
               </div>
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700">Company</label>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700">{t('contact.form.company')}</label>
                 <input 
                   type="text" 
                   id="company" 
@@ -150,7 +151,7 @@ const ContactCTA = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">{t('contact.form.message')}</label>
                 <textarea 
                   id="message" 
                   name="message" 
@@ -167,7 +168,7 @@ const ContactCTA = () => {
                   className="w-full"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
                 </Button>
               </div>
             </form>
