@@ -79,9 +79,6 @@ const Header = () => {
           </div>
           <div className="flex items-center space-x-4">
             <LanguageSelector />
-            <Button variant="outline" className="hidden md:inline-flex" asChild>
-              <Link href="/contact">{t.signin}</Link>
-            </Button>
             <Button asChild>
               <Link href="/contact">{t.bookDemo}</Link>
             </Button>
