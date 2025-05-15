@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Check, Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface PricingTierProps {
   title: string;
@@ -13,6 +14,8 @@ interface PricingTierProps {
   isPopular?: boolean;
   ctaLink: string;
   delay: number;
+  popularLabel: string;
+  periodLabel: string;
 }
 
 const PricingTier: React.FC<PricingTierProps> = ({ 
@@ -23,7 +26,9 @@ const PricingTier: React.FC<PricingTierProps> = ({
   cta, 
   isPopular = false,
   ctaLink,
-  delay 
+  delay,
+  popularLabel,
+  periodLabel
 }) => {
   return (
     <motion.div 
@@ -35,7 +40,7 @@ const PricingTier: React.FC<PricingTierProps> = ({
     >
       {isPopular && (
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium">
-          Most Popular
+          {popularLabel}
         </div>
       )}
       <div className="pb-6 border-b border-gray-100">
@@ -43,7 +48,7 @@ const PricingTier: React.FC<PricingTierProps> = ({
         <p className="text-gray-600 mb-4">{description}</p>
         <div className="flex items-baseline">
           <span className="text-4xl font-bold text-gray-900">{price}</span>
-          <span className="text-gray-500 ml-2">/month</span>
+          <span className="text-gray-500 ml-2">{periodLabel}</span>
         </div>
       </div>
       <ul className="py-6 space-y-4 flex-grow">
@@ -66,6 +71,33 @@ const PricingTier: React.FC<PricingTierProps> = ({
 };
 
 const PricingSection = () => {
+  const { t } = useLanguage();
+  
+  // Define features arrays with translations
+  const starterFeatures = [
+    "100 documents per month",
+    "PEPPOL compliance",
+    "Basic document management",
+    "Email support"
+  ];
+  
+  const businessFeatures = [
+    "500 documents per month",
+    "PEPPOL compliance",
+    "Advanced document management",
+    "Accountant export features",
+    "Priority email & chat support"
+  ];
+  
+  const enterpriseFeatures = [
+    "Unlimited documents",
+    "PEPPOL compliance",
+    "Advanced document management",
+    "Advanced integrations",
+    "24/7 priority support",
+    "Dedicated account manager"
+  ];
+  
   return (
     <section id="pricing" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -77,7 +109,7 @@ const PricingSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Simple, Transparent Pricing
+            {t('pricing.title')}
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -86,7 +118,7 @@ const PricingSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            No hidden fees, no long-term contracts. Choose the plan that's right for your business.
+            {t('pricing.subtitle')}
           </motion.p>
         </div>
         
@@ -94,54 +126,42 @@ const PricingSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Starter Plan */}
           <PricingTier 
-            title="Starter"
-            description="Perfect for small businesses"
-            price="€29"
-            features={[
-              "100 documents per month",
-              "PEPPOL compliance",
-              "Basic document management",
-              "Email support"
-            ]}
-            cta="Book a Demo"
+            title={t('pricing.starter.title')}
+            description={t('pricing.starter.description')}
+            price={t('pricing.starter.price')}
+            features={starterFeatures}
+            cta={t('pricing.cta.demo')}
             ctaLink="/contact"
             delay={0.1}
+            popularLabel={t('pricing.popular')}
+            periodLabel={t('pricing.period')}
           />
           
           {/* Business Plan (Popular) */}
           <PricingTier 
-            title="Business"
-            description="Ideal for growing companies"
-            price="€79"
-            features={[
-              "500 documents per month",
-              "PEPPOL compliance",
-              "Advanced document management",
-              "Accountant export features",
-              "Priority email & chat support"
-            ]}
-            cta="Book a Demo"
+            title={t('pricing.business.title')}
+            description={t('pricing.business.description')}
+            price={t('pricing.business.price')}
+            features={businessFeatures}
+            cta={t('pricing.cta.demo')}
             isPopular={true}
             ctaLink="/contact"
             delay={0.2}
+            popularLabel={t('pricing.popular')}
+            periodLabel={t('pricing.period')}
           />
           
           {/* Enterprise Plan */}
           <PricingTier 
-            title="Enterprise"
-            description="For large-scale operations"
-            price="€199"
-            features={[
-              "Unlimited documents",
-              "PEPPOL compliance",
-              "Advanced document management",
-              "Advanced integrations",
-              "24/7 priority support",
-              "Dedicated account manager"
-            ]}
-            cta="Contact Sales"
+            title={t('pricing.enterprise.title')}
+            description={t('pricing.enterprise.description')}
+            price={t('pricing.enterprise.price')}
+            features={enterpriseFeatures}
+            cta={t('pricing.cta.sales')}
             ctaLink="/contact"
             delay={0.3}
+            popularLabel={t('pricing.popular')}
+            periodLabel={t('pricing.period')}
           />
         </div>
       </div>

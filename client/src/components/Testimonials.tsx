@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TestimonialCardProps {
   quote: string;
@@ -35,6 +36,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, name, title, d
 };
 
 const Testimonials = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -46,7 +49,7 @@ const Testimonials = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Trusted by Businesses Like Yours
+            {t('testimonials.title')}
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -55,32 +58,32 @@ const Testimonials = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Join hundreds of companies that have streamlined their invoice management with Striktly.
+            {t('testimonials.subtitle')}
           </motion.p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Testimonial 1 */}
           <TestimonialCard 
-            quote="Striktly has transformed our invoicing process. We're now fully PEPPOL-compliant with no disruption to our existing workflows. The customer support is incredible!"
-            name="Sarah Johnson"
-            title="CFO, TechWorks Inc."
+            quote={t('testimonials.quote1')}
+            name={t('testimonials.name1')}
+            title={t('testimonials.title1')}
             delay={0.1}
           />
           
           {/* Testimonial 2 */}
           <TestimonialCard 
-            quote="The automated export to our accountant alone saved us countless hours. Striktly is by far the most cost-effective PEPPOL solution we found after months of research."
-            name="Mark Reynolds"
-            title="Operations Manager, Global Logistics"
+            quote={t('testimonials.quote2')}
+            name={t('testimonials.name2')}
+            title={t('testimonials.title2')}
             delay={0.2}
           />
           
           {/* Testimonial 3 */}
           <TestimonialCard 
-            quote="As a small business, we needed a solution that wouldn't break the bank. Striktly delivered exactly what we needed at a price point that made sense for us. Implementation was a breeze."
-            name="Elena Rodriguez"
-            title="Owner, Craft Supplies Direct"
+            quote={t('testimonials.quote3')}
+            name={t('testimonials.name3')}
+            title={t('testimonials.title3')}
             delay={0.3}
           />
         </div>

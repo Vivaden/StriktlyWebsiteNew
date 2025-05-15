@@ -54,6 +54,19 @@ export const en = {
   'features.cta.final': 'Ready to simplify your PEPPOL compliance?',
   'features.cta.final.subtitle': 'Join thousands of businesses that have streamlined their invoice processes with Striktly.',
   
+  // Testimonials
+  'testimonials.title': 'Trusted by Businesses Like Yours',
+  'testimonials.subtitle': 'Join hundreds of companies that have streamlined their invoice management with Striktly.',
+  'testimonials.quote1': 'Striktly has transformed our invoicing process. We\'re now fully PEPPOL-compliant with no disruption to our existing workflows. The customer support is incredible!',
+  'testimonials.name1': 'Sarah Johnson',
+  'testimonials.title1': 'CFO, TechWorks Inc.',
+  'testimonials.quote2': 'The automated export to our accountant alone saved us countless hours. Striktly is by far the most cost-effective PEPPOL solution we found after months of research.',
+  'testimonials.name2': 'Mark Reynolds',
+  'testimonials.title2': 'Operations Manager, Global Logistics',
+  'testimonials.quote3': 'As a small business, we needed a solution that wouldn\'t break the bank. Striktly delivered exactly what we needed at a price point that made sense for us. Implementation was a breeze.',
+  'testimonials.name3': 'Elena Rodriguez',
+  'testimonials.title3': 'Owner, Craft Supplies Direct',
+  
   // Pricing
   'pricing.title': 'Simple, Transparent Pricing',
   'pricing.subtitle': 'No hidden fees, no long-term contracts. Choose the plan that works best for your business.',
@@ -70,6 +83,20 @@ export const en = {
   'pricing.popular': 'Most Popular',
   'pricing.cta.demo': 'Book a Demo',
   'pricing.cta.sales': 'Contact Sales',
+  
+  // Pricing Features
+  'pricing.feature.docs100': '100 documents per month',
+  'pricing.feature.docs500': '500 documents per month',
+  'pricing.feature.docsUnlimited': 'Unlimited documents',
+  'pricing.feature.peppol': 'PEPPOL compliance',
+  'pricing.feature.basic': 'Basic document management',
+  'pricing.feature.advanced': 'Advanced document management',
+  'pricing.feature.accountant': 'Accountant export features',
+  'pricing.feature.integrations': 'Advanced integrations',
+  'pricing.feature.emailSupport': 'Email support',
+  'pricing.feature.prioritySupport': 'Priority email & chat support',
+  'pricing.feature.24support': '24/7 priority support',
+  'pricing.feature.dedicated': 'Dedicated account manager',
   
   // FAQ
   'faq.title': 'Frequently Asked Questions',

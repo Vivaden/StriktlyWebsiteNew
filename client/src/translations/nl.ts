@@ -54,6 +54,19 @@ export const nl = {
   'features.cta.final': 'Klaar om uw PEPPOL-compliance te vereenvoudigen?',
   'features.cta.final.subtitle': 'Sluit u aan bij duizenden bedrijven die hun factuurprocessen hebben gestroomlijnd met Striktly.',
   
+  // Testimonials
+  'testimonials.title': 'Vertrouwd door Bedrijven zoals het Uwe',
+  'testimonials.subtitle': 'Sluit u aan bij honderden bedrijven die hun factuurbeheer hebben gestroomlijnd met Striktly.',
+  'testimonials.quote1': 'Striktly heeft ons factureringsproces getransformeerd. We zijn nu volledig PEPPOL-compliant zonder verstoring van onze bestaande werkstromen. De klantenservice is ongelooflijk!',
+  'testimonials.name1': 'Sarah Johnson',
+  'testimonials.title1': 'CFO, TechWorks Inc.',
+  'testimonials.quote2': 'Alleen al de geautomatiseerde export naar onze accountant bespaarde ons talloze uren. Striktly is veruit de meest kosteneffectieve PEPPOL-oplossing die we na maanden onderzoek hebben gevonden.',
+  'testimonials.name2': 'Mark Reynolds',
+  'testimonials.title2': 'Operations Manager, Global Logistics',
+  'testimonials.quote3': 'Als klein bedrijf hadden we een oplossing nodig die niet te duur zou zijn. Striktly leverde precies wat we nodig hadden tegen een prijs die voor ons zinvol was. Implementatie was een fluitje van een cent.',
+  'testimonials.name3': 'Elena Rodriguez',
+  'testimonials.title3': 'Eigenaar, Craft Supplies Direct',
+  
   // Pricing
   'pricing.title': 'Eenvoudige, Transparante Prijzen',
   'pricing.subtitle': 'Geen verborgen kosten, geen langetermijncontracten. Kies het plan dat het beste bij uw bedrijf past.',
@@ -70,6 +83,20 @@ export const nl = {
   'pricing.popular': 'Meest Populair',
   'pricing.cta.demo': 'Demo Aanvragen',
   'pricing.cta.sales': 'Contact Verkoop',
+  
+  // Pricing Features
+  'pricing.feature.docs100': '100 documenten per maand',
+  'pricing.feature.docs500': '500 documenten per maand',
+  'pricing.feature.docsUnlimited': 'Onbeperkt documenten',
+  'pricing.feature.peppol': 'PEPPOL-compliance',
+  'pricing.feature.basic': 'Basis documentbeheer',
+  'pricing.feature.advanced': 'Geavanceerd documentbeheer',
+  'pricing.feature.accountant': 'Accountant exportfuncties',
+  'pricing.feature.integrations': 'Geavanceerde integraties',
+  'pricing.feature.emailSupport': 'E-mail ondersteuning',
+  'pricing.feature.prioritySupport': 'Prioriteit e-mail & chat ondersteuning',
+  'pricing.feature.24support': '24/7 prioriteit ondersteuning',
+  'pricing.feature.dedicated': 'Toegewijde accountmanager',
   
   // FAQ
   'faq.title': 'Veelgestelde Vragen',
