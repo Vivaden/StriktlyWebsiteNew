@@ -23,7 +23,7 @@ const containerVariants = {
 };
 
 const USPSection = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <section className="py-16 md:py-24 bg-white" id="features">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -58,45 +58,45 @@ const USPSection = () => {
           {/* USP 1 - Fast Compliance */}
           <FeatureCard 
             icon={<Zap />}
-            title={t('usp.card1.title')}
-            description={t('usp.card1.description')}
-            linkText={t('usp.learn.more')}
+            title={language === 'en' ? "Fast and Affordable Compliance" : "Snelle en Voordelige Compliance"}
+            description={language === 'en' ? "Become PEPPOL-compliant within minutes at a fraction of the cost of traditional solutions." : "Word PEPPOL-compliant binnen minuten tegen een fractie van de kosten van traditionele oplossingen."}
+            linkText={language === 'en' ? "Learn more" : "Meer informatie"}
             linkUrl="/features"
           />
 
           {/* USP 2 - No Workflow Changes */}
           <FeatureCard 
             icon={<ClipboardCopy />}
-            title={t('usp.card2.title')}
-            description={t('usp.card2.description')}
-            linkText={t('usp.learn.more')}
+            title={language === 'en' ? "No Workflow Changes" : "Geen Werkstroomwijzigingen"}
+            description={language === 'en' ? "Keep your existing processes. Striktly adapts to your way of working, not the other way around." : "Behoud uw bestaande processen. Striktly past zich aan uw manier van werken aan, niet andersom."}
+            linkText={language === 'en' ? "Learn more" : "Meer informatie"}
             linkUrl="/features"
           />
 
           {/* USP 3 - Centralized Document Management */}
           <FeatureCard 
             icon={<Layers />}
-            title={t('usp.card3.title')}
-            description={t('usp.card3.description')}
-            linkText={t('usp.learn.more')}
+            title={language === 'en' ? "Centralized Document Management" : "Gecentraliseerd Documentbeheer"}
+            description={language === 'en' ? "All your invoices and documents managed in one intuitive platform for maximum efficiency." : "Al uw facturen en documenten beheerd in één intuïtief platform voor maximale efficiëntie."}
+            linkText={language === 'en' ? "Learn more" : "Meer informatie"}
             linkUrl="/features"
           />
 
           {/* USP 4 - Automatic Exports */}
           <FeatureCard 
             icon={<ServerCog />}
-            title={t('usp.card4.title')}
-            description={t('usp.card4.description')}
-            linkText={t('usp.learn.more')}
+            title={language === 'en' ? "Automatic Export to Accountant" : "Automatische Export naar Accountant"}
+            description={language === 'en' ? "Export your documents seamlessly to your accountant in their preferred format, saving time and reducing errors." : "Exporteer uw documenten naadloos naar uw accountant in hun gewenste formaat, bespaar tijd en verminder fouten."}
+            linkText={language === 'en' ? "Learn more" : "Meer informatie"}
             linkUrl="/features"
           />
 
           {/* USP 5 - Unlimited Support */}
           <FeatureCard 
             icon={<LifeBuoy />}
-            title={t('usp.card5.title')}
-            description={t('usp.card5.description')}
-            linkText={t('usp.learn.more')}
+            title={language === 'en' ? "Unlimited Support" : "Onbeperkte Ondersteuning"}
+            description={language === 'en' ? "Access to our expert team whenever you need help, with no limit on questions or consultations." : "Toegang tot ons expertteam wanneer u hulp nodig heeft, zonder limiet op vragen of consulten."}
+            linkText={language === 'en' ? "Learn more" : "Meer informatie"}
             linkUrl="/features"
           />
 
@@ -111,10 +111,16 @@ const USPSection = () => {
             <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mb-6">
               <Info className="h-6 w-6 text-white" />
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-white">{t('usp.info.title')}</h3>
-            <p className="text-white/90 flex-grow mb-4">{t('usp.info.description')}</p>
+            <h3 className="text-xl font-semibold mb-3 text-white">
+              {language === 'en' ? "Need more information?" : "Meer informatie nodig?"}
+            </h3>
+            <p className="text-white/90 flex-grow mb-4">
+              {language === 'en' 
+                ? "Discover how Striktly can be tailored to your specific business needs with a personalized demo." 
+                : "Ontdek hoe Striktly kan worden aangepast aan uw specifieke zakelijke behoeften met een persoonlijke demo."}
+            </p>
             <Link href="/contact" className="text-white font-medium flex items-center bg-white/20 py-2 px-4 rounded-lg hover:bg-white/30 transition w-fit">
-              {t('usp.info.cta')}
+              {language === 'en' ? "Book a Demo" : "Demo Aanvragen"}
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
               </svg>
