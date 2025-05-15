@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface FAQItemProps {
   question: string;
@@ -34,34 +35,35 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer, index }) => {
   );
 };
 
-const faqItems = [
-  {
-    question: "What is PEPPOL?",
-    answer: "PEPPOL (Pan-European Public Procurement Online) is a set of specifications for standardized electronic document exchange. It enables organizations to exchange electronic documents (like invoices, orders, etc.) in a standardized format across borders."
-  },
-  {
-    question: "Why do I need to be PEPPOL-compliant?",
-    answer: "Many countries now require businesses to use PEPPOL for electronic invoicing, especially when dealing with government entities. Beyond compliance, PEPPOL standardization reduces errors, speeds up processing times, and cuts administrative costs."
-  },
-  {
-    question: "How does Striktly help with PEPPOL compliance?",
-    answer: "Striktly handles all the technical aspects of PEPPOL compliance for you. We manage the connection to the PEPPOL network, ensure your documents meet the required format specifications, and provide a seamless interface for sending and receiving documents through the network."
-  },
-  {
-    question: "Will I need to change my current systems?",
-    answer: "No. Striktly is designed to integrate with your existing workflows and systems. You can continue using your current accounting and ERP software. Striktly works alongside your systems to handle the PEPPOL-specific requirements without disrupting your operations."
-  },
-  {
-    question: "How long does it take to get set up?",
-    answer: "Most businesses are up and running with Striktly within minutes. Our onboarding process is straightforward, and our support team is available to assist you every step of the way."
-  },
-  {
-    question: "What kind of support does Striktly provide?",
-    answer: "All Striktly plans include unlimited support. We offer email support for all customers, with chat and priority support for Business and Enterprise plans. Our team of PEPPOL experts is ready to assist with any questions or issues you might have."
-  }
-];
-
 const FAQ = () => {
+  const { t } = useLanguage();
+  
+  const faqItems = [
+    {
+      question: t('faq.item1.q'),
+      answer: t('faq.item1.a')
+    },
+    {
+      question: t('faq.item2.q'),
+      answer: t('faq.item2.a')
+    },
+    {
+      question: t('faq.item3.q'),
+      answer: t('faq.item3.a')
+    },
+    {
+      question: t('faq.item4.q'),
+      answer: t('faq.item4.a')
+    },
+    {
+      question: t('faq.item5.q'),
+      answer: t('faq.item5.a')
+    },
+    {
+      question: t('faq.item6.q'),
+      answer: t('faq.item6.a')
+    }
+  ];
   return (
     <section id="faq" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -73,7 +75,7 @@ const FAQ = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Frequently Asked Questions
+            {t('faq.general.title')}
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -82,7 +84,7 @@ const FAQ = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Everything you need to know about Striktly and PEPPOL compliance.
+            {t('faq.general.subtitle')}
           </motion.p>
         </div>
         
@@ -110,9 +112,9 @@ const FAQ = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <p className="text-gray-600 mb-6">Still have questions? We're here to help.</p>
+          <p className="text-gray-600 mb-6">{t('faq.help.text')}</p>
           <Button asChild>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/contact">{t('faq.contact.cta')}</Link>
           </Button>
         </motion.div>
       </div>

@@ -84,6 +84,24 @@ export const en = {
   'faq.q4': 'Do you offer custom pricing for specific needs?',
   'faq.a4': 'Yes, we offer tailored pricing options for businesses with unique requirements. Contact our sales team to discuss your specific needs and we\'ll create a custom solution for you.',
   
+  // FAQ General
+  'faq.general.title': 'Frequently Asked Questions',
+  'faq.general.subtitle': 'Everything you need to know about Striktly and PEPPOL compliance.',
+  'faq.help.text': 'Still have questions? We\'re here to help.',
+  'faq.contact.cta': 'Contact Us',
+  'faq.item1.q': 'What is PEPPOL?',
+  'faq.item1.a': 'PEPPOL (Pan-European Public Procurement Online) is a set of specifications for standardized electronic document exchange. It enables organizations to exchange electronic documents (like invoices, orders, etc.) in a standardized format across borders.',
+  'faq.item2.q': 'Why do I need to be PEPPOL-compliant?',
+  'faq.item2.a': 'Many countries now require businesses to use PEPPOL for electronic invoicing, especially when dealing with government entities. Beyond compliance, PEPPOL standardization reduces errors, speeds up processing times, and cuts administrative costs.',
+  'faq.item3.q': 'How does Striktly help with PEPPOL compliance?',
+  'faq.item3.a': 'Striktly handles all the technical aspects of PEPPOL compliance for you. We manage the connection to the PEPPOL network, ensure your documents meet the required format specifications, and provide a seamless interface for sending and receiving documents through the network.',
+  'faq.item4.q': 'Will I need to change my current systems?',
+  'faq.item4.a': 'No. Striktly is designed to integrate with your existing workflows and systems. You can continue using your current accounting and ERP software. Striktly works alongside your systems to handle the PEPPOL-specific requirements without disrupting your operations.',
+  'faq.item5.q': 'How long does it take to get set up?',
+  'faq.item5.a': 'Most businesses are up and running with Striktly within minutes. Our onboarding process is straightforward, and our support team is available to assist you every step of the way.',
+  'faq.item6.q': 'What kind of support does Striktly provide?',
+  'faq.item6.a': 'All Striktly plans include unlimited support. We offer email support for all customers, with chat and priority support for Business and Enterprise plans. Our team of PEPPOL experts is ready to assist with any questions or issues you might have.',
+  
   // Contact CTA
   'contact.title': 'Ready to streamline your invoice management?',
   'contact.subtitle': 'Get started with Striktly today and experience hassle-free PEPPOL compliance with no changes to your current workflow.',

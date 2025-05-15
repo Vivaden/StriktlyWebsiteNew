@@ -84,6 +84,24 @@ export const nl = {
   'faq.q4': 'Biedt u aangepaste prijzen voor specifieke behoeften?',
   'faq.a4': 'Ja, we bieden op maat gemaakte prijsopties voor bedrijven met unieke vereisten. Neem contact op met ons verkoopteam om uw specifieke behoeften te bespreken en we creëren een aangepaste oplossing voor u.',
   
+  // FAQ General
+  'faq.general.title': 'Veelgestelde Vragen',
+  'faq.general.subtitle': 'Alles wat u moet weten over Striktly en PEPPOL-compliance.',
+  'faq.help.text': 'Nog vragen? Wij helpen u graag.',
+  'faq.contact.cta': 'Neem Contact Op',
+  'faq.item1.q': 'Wat is PEPPOL?',
+  'faq.item1.a': 'PEPPOL (Pan-European Public Procurement Online) is een verzameling specificaties voor gestandaardiseerde elektronische documentuitwisseling. Het stelt organisaties in staat elektronische documenten (zoals facturen, bestellingen, enz.) in een gestandaardiseerd formaat over grenzen heen uit te wisselen.',
+  'faq.item2.q': 'Waarom moet ik PEPPOL-compliant zijn?',
+  'faq.item2.a': 'Veel landen vereisen nu dat bedrijven PEPPOL gebruiken voor elektronische facturering, vooral bij het zakendoen met overheidsinstanties. Naast compliance vermindert PEPPOL-standaardisatie fouten, versnelt het verwerkingstijden en verlaagt het administratieve kosten.',
+  'faq.item3.q': 'Hoe helpt Striktly met PEPPOL-compliance?',
+  'faq.item3.a': 'Striktly handelt alle technische aspecten van PEPPOL-compliance voor u af. Wij beheren de verbinding met het PEPPOL-netwerk, zorgen ervoor dat uw documenten voldoen aan de vereiste formaatspecificaties en bieden een naadloze interface voor het verzenden en ontvangen van documenten via het netwerk.',
+  'faq.item4.q': 'Moet ik mijn huidige systemen veranderen?',
+  'faq.item4.a': 'Nee. Striktly is ontworpen om te integreren met uw bestaande workflows en systemen. U kunt uw huidige boekhoud- en ERP-software blijven gebruiken. Striktly werkt naast uw systemen om de PEPPOL-specifieke vereisten af te handelen zonder uw operaties te verstoren.',
+  'faq.item5.q': 'Hoe lang duurt het om alles op te zetten?',
+  'faq.item5.a': 'De meeste bedrijven zijn binnen enkele minuten operationeel met Striktly. Ons onboardingproces is eenvoudig en ons ondersteuningsteam staat klaar om u bij elke stap te helpen.',
+  'faq.item6.q': 'Welke ondersteuning biedt Striktly?',
+  'faq.item6.a': 'Alle Striktly-abonnementen omvatten onbeperkte ondersteuning. We bieden e-mailondersteuning voor alle klanten, met chat- en prioriteitsondersteuning voor Business- en Enterprise-abonnementen. Ons team van PEPPOL-experts staat klaar om te helpen bij vragen of problemen die u mogelijk heeft.',
+  
   // Contact CTA
   'contact.title': 'Klaar om uw factuurbeheer te stroomlijnen?',
   'contact.subtitle': 'Begin vandaag nog met Striktly en ervaar probleemloze PEPPOL-compliance zonder wijzigingen aan uw huidige werkwijze.',
