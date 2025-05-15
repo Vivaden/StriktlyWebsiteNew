@@ -16,7 +16,71 @@ interface FormData {
 
 const ContactCTA = () => {
   const { toast } = useToast();
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+  
+  // Hardcoded translations
+  const translations = {
+    en: {
+      contactTitle: "Ready to streamline your PEPPOL invoicing?",
+      contactSubtitle: "Get in touch to learn how Striktly can help your business with PEPPOL compliance and document management.",
+      
+      // Features
+      feature1Title: "Personalized Demonstration",
+      feature1Description: "Schedule a demo with our team to see how Striktly can fit your specific business needs.",
+      feature2Title: "Expert Consultation",
+      feature2Description: "Our PEPPOL experts will guide you through the implementation process and answer all your questions.",
+      
+      // CTAs
+      ctaPrimary: "Book a Demo",
+      ctaSecondary: "View Pricing",
+      
+      // Form
+      formTitle: "Send us a message",
+      formName: "Name",
+      formEmail: "Email",
+      formCompany: "Company",
+      formMessage: "Message",
+      formSubmit: "Send Message",
+      formSubmitting: "Sending...",
+      
+      // Toast messages
+      toastSuccessTitle: "Message sent!",
+      toastSuccessDescription: "We'll get back to you as soon as possible.",
+      toastErrorTitle: "Error",
+      toastErrorDescription: "There was a problem sending your message. Please try again."
+    },
+    nl: {
+      contactTitle: "Klaar om uw PEPPOL-facturering te stroomlijnen?",
+      contactSubtitle: "Neem contact op om te leren hoe Striktly uw bedrijf kan helpen met PEPPOL-compliance en documentbeheer.",
+      
+      // Features
+      feature1Title: "Persoonlijke Demonstratie",
+      feature1Description: "Plan een demo met ons team om te zien hoe Striktly kan passen bij uw specifieke zakelijke behoeften.",
+      feature2Title: "Expert Consultatie",
+      feature2Description: "Onze PEPPOL-experts begeleiden u door het implementatieproces en beantwoorden al uw vragen.",
+      
+      // CTAs
+      ctaPrimary: "Demo Aanvragen",
+      ctaSecondary: "Prijzen Bekijken",
+      
+      // Form
+      formTitle: "Stuur ons een bericht",
+      formName: "Naam",
+      formEmail: "E-mail",
+      formCompany: "Bedrijf",
+      formMessage: "Bericht",
+      formSubmit: "Bericht Versturen",
+      formSubmitting: "Versturen...",
+      
+      // Toast messages
+      toastSuccessTitle: "Bericht verzonden!",
+      toastSuccessDescription: "We nemen zo snel mogelijk contact met u op.",
+      toastErrorTitle: "Fout",
+      toastErrorDescription: "Er is een probleem opgetreden bij het verzenden van uw bericht. Probeer het opnieuw."
+    }
+  };
+  
+  const t = translations[language as keyof typeof translations] || translations.en;
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -41,8 +105,8 @@ const ContactCTA = () => {
       await apiRequest('POST', '/api/contact', formData);
       
       toast({
-        title: t('contact.toast.success.title'),
-        description: t('contact.toast.success.description'),
+        title: t.toastSuccessTitle,
+        description: t.toastSuccessDescription,
       });
       
       setFormData({
@@ -53,8 +117,8 @@ const ContactCTA = () => {
       });
     } catch (error) {
       toast({
-        title: t('contact.toast.error.title'),
-        description: t('contact.toast.error.description'),
+        title: t.toastErrorTitle,
+        description: t.toastErrorDescription,
         variant: "destructive"
       });
     } finally {
@@ -72,16 +136,16 @@ const ContactCTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t('contact.title')}</h2>
-            <p className="text-xl text-gray-600 mb-8">{t('contact.subtitle')}</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{t.contactTitle}</h2>
+            <p className="text-xl text-gray-600 mb-8">{t.contactSubtitle}</p>
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
                   <CheckCircle className="h-5 w-5 text-primary" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">{t('contact.feature1.title')}</h3>
-                  <p className="text-gray-600">{t('contact.feature1.description')}</p>
+                  <h3 className="text-lg font-medium text-gray-900">{t.feature1Title}</h3>
+                  <p className="text-gray-600">{t.feature1Description}</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -89,17 +153,17 @@ const ContactCTA = () => {
                   <CheckCircle className="h-5 w-5 text-primary" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">{t('contact.feature2.title')}</h3>
-                  <p className="text-gray-600">{t('contact.feature2.description')}</p>
+                  <h3 className="text-lg font-medium text-gray-900">{t.feature2Title}</h3>
+                  <p className="text-gray-600">{t.feature2Description}</p>
                 </div>
               </div>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Button size="lg" asChild>
-                <Link href="/contact">{t('contact.cta.primary')}</Link>
+                <Link href="/contact">{t.ctaPrimary}</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/pricing">{t('contact.cta.secondary')}</Link>
+                <Link href="/pricing">{t.ctaSecondary}</Link>
               </Button>
             </div>
           </motion.div>
@@ -112,10 +176,10 @@ const ContactCTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h3 className="text-xl font-bold mb-6 text-gray-900">{t('contact.form.title')}</h3>
+            <h3 className="text-xl font-bold mb-6 text-gray-900">{t.formTitle}</h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">{t('contact.form.name')}</label>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700">{t.formName}</label>
                 <input 
                   type="text" 
                   id="name" 
@@ -127,7 +191,7 @@ const ContactCTA = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">{t('contact.form.email')}</label>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">{t.formEmail}</label>
                 <input 
                   type="email" 
                   id="email" 
@@ -139,7 +203,7 @@ const ContactCTA = () => {
                 />
               </div>
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700">{t('contact.form.company')}</label>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700">{t.formCompany}</label>
                 <input 
                   type="text" 
                   id="company" 
@@ -151,7 +215,7 @@ const ContactCTA = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700">{t('contact.form.message')}</label>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700">{t.formMessage}</label>
                 <textarea 
                   id="message" 
                   name="message" 
@@ -168,7 +232,7 @@ const ContactCTA = () => {
                   className="w-full"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
+                  {isSubmitting ? t.formSubmitting : t.formSubmit}
                 </Button>
               </div>
             </form>

@@ -71,32 +71,111 @@ const PricingTier: React.FC<PricingTierProps> = ({
 };
 
 const PricingSection = () => {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
   
-  // Define features arrays with actual translations
-  const starterFeatures = [
-    '30 documents per month',
-    'PEPPOL compliance',
-    'Basic document management',
-    'Email support'
-  ];
+  // Hardcoded translations
+  const translations = {
+    en: {
+      sectionTitle: "Choose Your Plan",
+      sectionSubtitle: "Select the package that best fits your business needs. All plans include core PEPPOL compliance features.",
+      popular: "Most Popular",
+      period: "/month",
+      
+      // Starter tier
+      starterTitle: "Starter",
+      starterDescription: "Perfect for small businesses just getting started with PEPPOL.",
+      starterCta: "Book a Demo",
+      
+      // Business tier
+      businessTitle: "Business",
+      businessDescription: "Ideal for growing businesses with moderate document volume.",
+      businessCta: "Book a Demo",
+      
+      // Enterprise tier
+      enterpriseTitle: "Enterprise",
+      enterpriseDescription: "Advanced features for businesses with high document volumes.",
+      enterpriseCta: "Contact Sales"
+    },
+    nl: {
+      sectionTitle: "Kies Uw Plan",
+      sectionSubtitle: "Selecteer het pakket dat het beste bij uw zakelijke behoeften past. Alle plannen bevatten kernfuncties voor PEPPOL-compliance.",
+      popular: "Meest Populair",
+      period: "/maand",
+      
+      // Starter tier
+      starterTitle: "Starter",
+      starterDescription: "Perfect voor kleine bedrijven die net beginnen met PEPPOL.",
+      starterCta: "Demo Aanvragen",
+      
+      // Business tier
+      businessTitle: "Business",
+      businessDescription: "Ideaal voor groeiende bedrijven met gemiddeld documentvolume.",
+      businessCta: "Demo Aanvragen",
+      
+      // Enterprise tier
+      enterpriseTitle: "Enterprise",
+      enterpriseDescription: "Geavanceerde functies voor bedrijven met hoog documentvolume.",
+      enterpriseCta: "Contact Verkoop"
+    }
+  };
   
-  const businessFeatures = [
-    '75 documents per month',
-    'PEPPOL compliance',
-    'Advanced document management',
-    'Accountant export features',
-    'Priority email & chat support'
-  ];
+  const t = translations[language as keyof typeof translations] || translations.en;
   
-  const enterpriseFeatures = [
-    'Unlimited documents',
-    'PEPPOL compliance',
-    'Advanced document management',
-    'Advanced integrations',
-    '24/7 priority support',
-    'Dedicated account manager'
-  ];
+  // Define features arrays in both languages
+  const features = {
+    en: {
+      starter: [
+        '30 documents per month',
+        'PEPPOL compliance',
+        'Basic document management',
+        'Email support'
+      ],
+      business: [
+        '75 documents per month',
+        'PEPPOL compliance',
+        'Advanced document management',
+        'Accountant export features',
+        'Priority email & chat support'
+      ],
+      enterprise: [
+        'Unlimited documents',
+        'PEPPOL compliance',
+        'Advanced document management',
+        'Advanced integrations',
+        '24/7 priority support',
+        'Dedicated account manager'
+      ]
+    },
+    nl: {
+      starter: [
+        '30 documenten per maand',
+        'PEPPOL-compliance',
+        'Basis documentbeheer',
+        'E-mail ondersteuning'
+      ],
+      business: [
+        '75 documenten per maand',
+        'PEPPOL-compliance',
+        'Geavanceerd documentbeheer',
+        'Exportfuncties voor accountants',
+        'Prioriteit e-mail & chat ondersteuning'
+      ],
+      enterprise: [
+        'Onbeperkt documenten',
+        'PEPPOL-compliance',
+        'Geavanceerd documentbeheer',
+        'Geavanceerde integraties',
+        '24/7 prioriteit ondersteuning',
+        'Toegewijde accountmanager'
+      ]
+    }
+  };
+  
+  const currentFeatures = features[language as keyof typeof features] || features.en;
+  
+  const starterFeatures = currentFeatures.starter;
+  const businessFeatures = currentFeatures.business;
+  const enterpriseFeatures = currentFeatures.enterprise;
   
   return (
     <section id="pricing" className="py-16 md:py-24 bg-gray-50">
@@ -109,7 +188,7 @@ const PricingSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            {t('pricing.title')}
+            {t.sectionTitle}
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -118,7 +197,7 @@ const PricingSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            {t('pricing.subtitle')}
+            {t.sectionSubtitle}
           </motion.p>
         </div>
         
@@ -126,42 +205,42 @@ const PricingSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Starter Plan */}
           <PricingTier 
-            title={t('pricing.starter.title')}
-            description={t('pricing.starter.description')}
+            title={t.starterTitle}
+            description={t.starterDescription}
             price="€25"
             features={starterFeatures}
-            cta={t('pricing.cta.demo')}
+            cta={t.starterCta}
             ctaLink="/contact"
             delay={0.1}
-            popularLabel={t('pricing.popular')}
-            periodLabel={t('pricing.period')}
+            popularLabel={t.popular}
+            periodLabel={t.period}
           />
           
           {/* Business Plan (Popular) */}
           <PricingTier 
-            title={t('pricing.business.title')}
-            description={t('pricing.business.description')}
+            title={t.businessTitle}
+            description={t.businessDescription}
             price="€50"
             features={businessFeatures}
-            cta={t('pricing.cta.demo')}
+            cta={t.businessCta}
             isPopular={true}
             ctaLink="/contact"
             delay={0.2}
-            popularLabel={t('pricing.popular')}
-            periodLabel={t('pricing.period')}
+            popularLabel={t.popular}
+            periodLabel={t.period}
           />
           
           {/* Enterprise Plan */}
           <PricingTier 
-            title={t('pricing.enterprise.title')}
-            description={t('pricing.enterprise.description')}
+            title={t.enterpriseTitle}
+            description={t.enterpriseDescription}
             price="€100"
             features={enterpriseFeatures}
-            cta={t('pricing.cta.sales')}
+            cta={t.enterpriseCta}
             ctaLink="/contact"
             delay={0.3}
-            popularLabel={t('pricing.popular')}
-            periodLabel={t('pricing.period')}
+            popularLabel={t.popular}
+            periodLabel={t.period}
           />
         </div>
       </div>
