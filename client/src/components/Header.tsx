@@ -80,7 +80,7 @@ const Header = () => {
           </div>
           <div className="flex items-center space-x-4">
             <LanguageSelector />
-            <Button asChild>
+            <Button asChild animation="pulse">
               <Link href="/contact">{t.bookDemo}</Link>
             </Button>
           </div>

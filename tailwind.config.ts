@@ -79,10 +79,25 @@ export default {
             height: "0",
           },
         },
+        "button-pulse": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.03)" },
+        },
+        "button-bounce": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-2px)" },
+        },
+        "button-glow": {
+          "0%, 100%": { boxShadow: "0 0 0 rgba(36, 173, 173, 0)" },
+          "50%": { boxShadow: "0 0 10px rgba(36, 173, 173, 0.5)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "button-pulse": "button-pulse 1.5s ease-in-out infinite",
+        "button-bounce": "button-bounce 0.6s ease-in-out",
+        "button-glow": "button-glow 1.5s ease-in-out infinite",
       },
     },
   },
