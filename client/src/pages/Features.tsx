@@ -15,8 +15,11 @@ import {
   Users
 } from "lucide-react";
 import IconWrapper from "@/components/icons/IconWrapper";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Features = () => {
+  const { t } = useLanguage();
+  
   return (
     <>
       <main>
@@ -30,7 +33,7 @@ const Features = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Powerful Features for Effortless PEPPOL Compliance
+                {t('page.features.title')}
               </motion.h1>
               <motion.p 
                 className="text-xl text-gray-600 mb-8"
@@ -38,7 +41,7 @@ const Features = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                Everything you need to manage invoices, comply with regulations, and streamline your document workflows.
+                {t('page.features.subtitle')}
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -46,7 +49,7 @@ const Features = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <Button size="lg" asChild>
-                  <Link href="/pricing">Start Free Trial</Link>
+                  <Link href="/pricing">{t('cta.button.pricing')}</Link>
                 </Button>
               </motion.div>
             </div>
@@ -69,24 +72,24 @@ const Features = () => {
                     <ShieldCheck />
                   </IconWrapper>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">PEPPOL Compliance</h2>
-                <p className="text-lg text-gray-600 mb-6">Meeting all requirements with minimal effort on your part.</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t('features.section.peppol')}</h2>
+                <p className="text-lg text-gray-600 mb-6">{t('features.section.peppol.subtitle')}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <Zap className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Fast PEPPOL access point connection</span>
+                    <span className="text-gray-700">{t('features.item.peppol.1')}</span>
                   </li>
                   <li className="flex items-start">
                     <FileCheck className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Automatic document format validation</span>
+                    <span className="text-gray-700">{t('features.item.peppol.2')}</span>
                   </li>
                   <li className="flex items-start">
                     <Users className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Trading partner management</span>
+                    <span className="text-gray-700">{t('features.item.peppol.3')}</span>
                   </li>
                   <li className="flex items-start">
                     <Database className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Compliant document storage</span>
+                    <span className="text-gray-700">{t('features.item.peppol.4')}</span>
                   </li>
                 </ul>
               </motion.div>
@@ -103,24 +106,24 @@ const Features = () => {
                     <ClipboardCopy />
                   </IconWrapper>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Workflow Integration</h2>
-                <p className="text-lg text-gray-600 mb-6">Seamlessly fits into your existing business processes.</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t('features.section.workflow')}</h2>
+                <p className="text-lg text-gray-600 mb-6">{t('features.section.workflow.subtitle')}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <Zap className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Email-to-PEPPOL conversion</span>
+                    <span className="text-gray-700">{t('features.item.workflow.1')}</span>
                   </li>
                   <li className="flex items-start">
                     <FileCheck className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">API integration with your systems</span>
+                    <span className="text-gray-700">{t('features.item.workflow.2')}</span>
                   </li>
                   <li className="flex items-start">
                     <Users className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Customizable approval workflows</span>
+                    <span className="text-gray-700">{t('features.item.workflow.3')}</span>
                   </li>
                   <li className="flex items-start">
                     <Database className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Keep using your existing tools</span>
+                    <span className="text-gray-700">{t('features.item.workflow.4')}</span>
                   </li>
                 </ul>
               </motion.div>
@@ -137,24 +140,24 @@ const Features = () => {
                     <Layers />
                   </IconWrapper>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Document Management</h2>
-                <p className="text-lg text-gray-600 mb-6">All your business documents in one secure platform.</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t('features.section.document')}</h2>
+                <p className="text-lg text-gray-600 mb-6">{t('features.section.document.subtitle')}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <Zap className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Centralized document repository</span>
+                    <span className="text-gray-700">{t('features.item.document.1')}</span>
                   </li>
                   <li className="flex items-start">
                     <FileCheck className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Advanced search and filtering</span>
+                    <span className="text-gray-700">{t('features.item.document.2')}</span>
                   </li>
                   <li className="flex items-start">
                     <Users className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Role-based access control</span>
+                    <span className="text-gray-700">{t('features.item.document.3')}</span>
                   </li>
                   <li className="flex items-start">
                     <Database className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Audit trails and history tracking</span>
+                    <span className="text-gray-700">{t('features.item.document.4')}</span>
                   </li>
                 </ul>
               </motion.div>
@@ -171,24 +174,24 @@ const Features = () => {
                     <ServerCog />
                   </IconWrapper>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Automation & Exports</h2>
-                <p className="text-lg text-gray-600 mb-6">Save time with intelligent automation features.</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t('features.section.automation')}</h2>
+                <p className="text-lg text-gray-600 mb-6">{t('features.section.automation.subtitle')}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <Zap className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Automatic accountant exports</span>
+                    <span className="text-gray-700">{t('features.item.automation.1')}</span>
                   </li>
                   <li className="flex items-start">
                     <FileCheck className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Smart document recognition</span>
+                    <span className="text-gray-700">{t('features.item.automation.2')}</span>
                   </li>
                   <li className="flex items-start">
                     <Users className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Scheduled reports and exports</span>
+                    <span className="text-gray-700">{t('features.item.automation.3')}</span>
                   </li>
                   <li className="flex items-start">
                     <LineChart className="h-5 w-5 text-primary mt-1 mr-3" />
-                    <span className="text-gray-700">Business intelligence dashboards</span>
+                    <span className="text-gray-700">{t('features.item.automation.4')}</span>
                   </li>
                 </ul>
               </motion.div>
@@ -206,20 +209,20 @@ const Features = () => {
                     <LifeBuoy />
                   </IconWrapper>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Unlimited Support</h2>
-                <p className="text-lg text-gray-600 mb-6">We're with you every step of the way.</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t('features.section.support')}</h2>
+                <p className="text-lg text-gray-600 mb-6">{t('features.section.support.subtitle')}</p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="font-semibold text-gray-900 mb-2">Expert Assistance</h3>
-                    <p className="text-gray-700">Direct access to PEPPOL specialists who can help with any technical issues.</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">{t('features.support.expertise')}</h3>
+                    <p className="text-gray-700">{t('features.support.expertise.desc')}</p>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="font-semibold text-gray-900 mb-2">Onboarding Support</h3>
-                    <p className="text-gray-700">Guided setup and team training to ensure a smooth transition.</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">{t('features.support.onboarding')}</h3>
+                    <p className="text-gray-700">{t('features.support.onboarding.desc')}</p>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <h3 className="font-semibold text-gray-900 mb-2">Knowledge Base</h3>
-                    <p className="text-gray-700">Comprehensive documentation, guides, and best practices.</p>
+                    <h3 className="font-semibold text-gray-900 mb-2">{t('features.support.knowledge')}</h3>
+                    <p className="text-gray-700">{t('features.support.knowledge.desc')}</p>
                   </div>
                 </div>
               </motion.div>
@@ -233,14 +236,14 @@ const Features = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to simplify your PEPPOL compliance?</h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Join thousands of businesses that have streamlined their invoice processes with Striktly.</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t('features.cta.title')}</h2>
+              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">{t('features.cta.subtitle')}</p>
               <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                 <Button size="lg" asChild>
-                  <Link href="/contact">Book a Demo</Link>
+                  <Link href="/contact">{t('cta.button.demo')}</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="/pricing">View Pricing</Link>
+                  <Link href="/pricing">{t('cta.button.pricing')}</Link>
                 </Button>
               </div>
             </motion.div>

@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface FormData {
   name: string;
@@ -16,6 +17,7 @@ interface FormData {
 }
 
 const Contact = () => {
+  const { t } = useLanguage();
   const { toast } = useToast();
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -79,7 +81,7 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                Contact Us
+                {t('page.contact.title')}
               </motion.h1>
               <motion.p 
                 className="text-xl text-gray-600 mb-8"
@@ -87,7 +89,7 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                Have questions or need assistance? We're here to help you succeed with PEPPOL compliance.
+                {t('page.contact.subtitle')}
               </motion.p>
             </div>
           </div>
@@ -104,8 +106,8 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-                <p className="text-lg text-gray-600 mb-8">We'd love to hear from you. Whether you have a question about features, pricing, or would like to schedule a demo, our team is ready to answer all your questions.</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">{t('contact.page.getintouch')}</h2>
+                <p className="text-lg text-gray-600 mb-8">{t('contact.page.getintouch.description')}</p>
                 
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -113,7 +115,7 @@ const Contact = () => {
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">Phone</h3>
+                      <h3 className="text-lg font-medium text-gray-900">{t('contact.page.phone')}</h3>
                       <p className="text-gray-600">+1 (555) 123-4567</p>
                     </div>
                   </div>
@@ -123,7 +125,7 @@ const Contact = () => {
                       <Mail className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">Email</h3>
+                      <h3 className="text-lg font-medium text-gray-900">{t('contact.page.email')}</h3>
                       <p className="text-gray-600">info@striktly.com</p>
                       <p className="text-gray-600">support@striktly.com</p>
                     </div>
@@ -134,7 +136,7 @@ const Contact = () => {
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">Office</h3>
+                      <h3 className="text-lg font-medium text-gray-900">{t('contact.page.office')}</h3>
                       <p className="text-gray-600">123 Business Avenue</p>
                       <p className="text-gray-600">Technology Park, Suite 456</p>
                       <p className="text-gray-600">Amsterdam, Netherlands</p>
@@ -146,9 +148,9 @@ const Contact = () => {
                       <Clock className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-medium text-gray-900">Business Hours</h3>
-                      <p className="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM CET</p>
-                      <p className="text-gray-600">Saturday - Sunday: Closed</p>
+                      <h3 className="text-lg font-medium text-gray-900">{t('contact.page.hours')}</h3>
+                      <p className="text-gray-600">{t('contact.page.hours.weekdays')}</p>
+                      <p className="text-gray-600">{t('contact.page.hours.weekend')}</p>
                     </div>
                   </div>
                 </div>
@@ -162,10 +164,10 @@ const Contact = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div className="bg-white rounded-xl shadow-md p-8 border border-gray-100">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-6">{t('contact.page.form.title')}</h2>
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name *</label>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700">{t('contact.page.form.name')} *</label>
                       <input 
                         type="text" 
                         id="name" 
@@ -178,7 +180,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email *</label>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">{t('contact.page.form.email')} *</label>
                       <input 
                         type="email" 
                         id="email" 
@@ -192,7 +194,7 @@ const Contact = () => {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="company" className="block text-sm font-medium text-gray-700">Company *</label>
+                        <label htmlFor="company" className="block text-sm font-medium text-gray-700">{t('contact.page.form.company')} *</label>
                         <input 
                           type="text" 
                           id="company" 
@@ -205,7 +207,7 @@ const Contact = () => {
                       </div>
                       
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700">{t('contact.page.form.phone')}</label>
                         <input 
                           type="tel" 
                           id="phone" 
@@ -218,7 +220,7 @@ const Contact = () => {
                     </div>
                     
                     <div>
-                      <label htmlFor="requestType" className="block text-sm font-medium text-gray-700">Request Type</label>
+                      <label htmlFor="requestType" className="block text-sm font-medium text-gray-700">{t('contact.page.form.requestType')}</label>
                       <select 
                         id="requestType" 
                         name="requestType" 
@@ -226,15 +228,15 @@ const Contact = () => {
                         onChange={handleChange}
                         className="mt-1 block w-full py-3 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
                       >
-                        <option value="general">General Inquiry</option>
-                        <option value="demo">Request a Demo</option>
-                        <option value="pricing">Pricing Question</option>
-                        <option value="support">Technical Support</option>
+                        <option value="general">{t('contact.page.form.requestType.general')}</option>
+                        <option value="demo">{t('contact.page.form.requestType.demo')}</option>
+                        <option value="pricing">{t('contact.page.form.requestType.pricing')}</option>
+                        <option value="support">{t('contact.page.form.requestType.support')}</option>
                       </select>
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message *</label>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700">{t('contact.page.form.message')} *</label>
                       <textarea 
                         id="message" 
                         name="message" 
@@ -252,7 +254,7 @@ const Contact = () => {
                         className="w-full"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? 'Sending...' : 'Send Message'}
+                        {isSubmitting ? t('cta.button.sending') : t('cta.button.send')}
                       </Button>
                     </div>
                   </form>
@@ -268,9 +270,9 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Want to See Striktly in Action?</h2>
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Schedule a personalized demo with one of our PEPPOL experts to see how Striktly can simplify compliance for your business.</p>
-              <Button size="lg">Schedule a Demo</Button>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{t('contact.page.demo.title')}</h2>
+              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">{t('contact.page.demo.description')}</p>
+              <Button size="lg">{t('cta.button.schedule')}</Button>
             </motion.div>
           </div>
         </section>
