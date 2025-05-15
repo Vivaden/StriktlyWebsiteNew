@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 import { motion } from "framer-motion";
 import FAQ from "@/components/FAQ";
 import ContactCTA from "@/components/ContactCTA";
@@ -6,10 +6,6 @@ import ContactCTA from "@/components/ContactCTA";
 const FaqPage = () => {
   return (
     <>
-      <Helmet>
-        <title>FAQ - Striktly PEPPOL Solution</title>
-        <meta name="description" content="Frequently asked questions about Striktly and PEPPOL compliance. Find answers about implementation, pricing, features, and more." />
-      </Helmet>
       <main>
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-r from-blue-50 to-indigo-50">

@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
@@ -68,10 +68,6 @@ const Contact = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Us - Striktly PEPPOL Solution</title>
-        <meta name="description" content="Get in touch with Striktly's team for questions about PEPPOL compliance, pricing, or to schedule a demo. We're here to help your business succeed." />
-      </Helmet>
       <main>
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-r from-blue-50 to-indigo-50">
