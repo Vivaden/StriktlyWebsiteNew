@@ -9,7 +9,29 @@ const Header = () => {
   const [location] = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+  
+  // Hardcoded translations
+  const translations = {
+    en: {
+      home: "Home",
+      features: "Features",
+      pricing: "Pricing",
+      contact: "Contact",
+      signin: "Sign In",
+      bookDemo: "Book a Demo"
+    },
+    nl: {
+      home: "Home",
+      features: "Functies",
+      pricing: "Prijzen",
+      contact: "Contact",
+      signin: "Inloggen",
+      bookDemo: "Demo Aanvragen"
+    }
+  };
+  
+  const t = translations[language as keyof typeof translations];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,26 +64,26 @@ const Header = () => {
             </Link>
             <nav className="hidden md:flex ml-10 space-x-8">
               <Link href="/" className={`${location === '/' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
-                {t('nav.home')}
+                {t.home}
               </Link>
               <Link href="/features" className={`${location === '/features' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
-                {t('nav.features')}
+                {t.features}
               </Link>
               <Link href="/pricing" className={`${location === '/pricing' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
-                {t('nav.pricing')}
+                {t.pricing}
               </Link>
               <Link href="/contact" className={`${location === '/contact' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
-                {t('nav.contact')}
+                {t.contact}
               </Link>
             </nav>
           </div>
           <div className="flex items-center space-x-4">
             <LanguageSelector />
             <Button variant="outline" className="hidden md:inline-flex" asChild>
-              <Link href="/contact">{t('nav.signin')}</Link>
+              <Link href="/contact">{t.signin}</Link>
             </Button>
             <Button asChild>
-              <Link href="/contact">{t('cta.book_demo')}</Link>
+              <Link href="/contact">{t.bookDemo}</Link>
             </Button>
           </div>
           <div className="md:hidden flex items-center">

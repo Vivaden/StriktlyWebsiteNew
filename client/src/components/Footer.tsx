@@ -2,14 +2,47 @@ import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+  
+  // Hardcoded translations
+  const translations = {
+    en: {
+      tagline: "Fast and low-cost PEPPOL compliance for your business.",
+      navigation: "Navigation",
+      home: "Home",
+      features: "Features",
+      pricing: "Pricing",
+      contact: "Contact",
+      legal: "Legal",
+      privacy: "Privacy Policy",
+      terms: "Terms of Service",
+      cookies: "Cookie Policy",
+      copyright: "© 2025 Striktly. All rights reserved."
+    },
+    nl: {
+      tagline: "Snelle en betaalbare PEPPOL-compliance voor uw bedrijf.",
+      navigation: "Navigatie",
+      home: "Home",
+      features: "Functies",
+      pricing: "Prijzen",
+      contact: "Contact",
+      legal: "Juridisch",
+      privacy: "Privacybeleid",
+      terms: "Servicevoorwaarden",
+      cookies: "Cookiebeleid",
+      copyright: "© 2025 Striktly. Alle rechten voorbehouden."
+    }
+  };
+  
+  const t = translations[language as keyof typeof translations];
+  
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           <div>
             <div className="text-2xl font-bold mb-4">Striktly</div>
-            <p className="text-gray-400 mb-6">{t('footer.tagline')}</p>
+            <p className="text-gray-400 mb-6">{t.tagline}</p>
             <div className="flex space-x-4">
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">
                 <span className="sr-only">Twitter</span>
@@ -26,26 +59,26 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-medium mb-4">{t('footer.navigation')}</h3>
+            <h3 className="text-lg font-medium mb-4">{t.navigation}</h3>
             <ul className="space-y-3">
-              <li><Link href="/" className="text-gray-400 hover:text-white">{t('footer.home')}</Link></li>
-              <li><Link href="/features" className="text-gray-400 hover:text-white">{t('footer.features')}</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-white">{t('footer.pricing')}</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('footer.contact')}</Link></li>
+              <li><Link href="/" className="text-gray-400 hover:text-white">{t.home}</Link></li>
+              <li><Link href="/features" className="text-gray-400 hover:text-white">{t.features}</Link></li>
+              <li><Link href="/pricing" className="text-gray-400 hover:text-white">{t.pricing}</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-white">{t.contact}</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-medium mb-4">{t('footer.legal')}</h3>
+            <h3 className="text-lg font-medium mb-4">{t.legal}</h3>
             <ul className="space-y-3">
-              <li><Link href="/privacy" className="text-gray-400 hover:text-white">{t('footer.privacy')}</Link></li>
-              <li><Link href="/terms" className="text-gray-400 hover:text-white">{t('footer.terms')}</Link></li>
-              <li><Link href="/cookies" className="text-gray-400 hover:text-white">{t('footer.cookies')}</Link></li>
+              <li><Link href="/privacy" className="text-gray-400 hover:text-white">{t.privacy}</Link></li>
+              <li><Link href="/terms" className="text-gray-400 hover:text-white">{t.terms}</Link></li>
+              <li><Link href="/cookies" className="text-gray-400 hover:text-white">{t.cookies}</Link></li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400">{t('footer.copyright')}</p>
+            <p className="text-gray-400">{t.copyright}</p>
           </div>
         </div>
       </div>

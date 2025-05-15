@@ -10,7 +10,25 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const [location] = useLocation();
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+  
+  // Hardcoded translations
+  const translations = {
+    en: {
+      home: "Home",
+      features: "Features",
+      pricing: "Pricing",
+      contact: "Contact"
+    },
+    nl: {
+      home: "Home",
+      features: "Functies",
+      pricing: "Prijzen",
+      contact: "Contact"
+    }
+  };
+  
+  const t = translations[language as keyof typeof translations];
 
   // Close menu on location change
   useEffect(() => {
@@ -30,28 +48,28 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
-          {t('nav.home')}
+          {t.home}
         </Link>
         <Link 
           href="/features" 
           className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/features' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
-          {t('nav.features')}
+          {t.features}
         </Link>
         <Link 
           href="/pricing" 
           className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/pricing' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
-          {t('nav.pricing')}
+          {t.pricing}
         </Link>
         <Link 
           href="/contact" 
           className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/contact' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
-          {t('nav.contact')}
+          {t.contact}
         </Link>
       </div>
     </div>
