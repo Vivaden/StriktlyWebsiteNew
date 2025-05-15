@@ -27,5 +27,8 @@ export default defineConfig({
     }
   },
   // For GitHub Pages, add a base path
-  base: '/StriktlyWebsiteNew/'
+  base: '/StriktlyWebsiteNew/',
+  // Specify the entry point
+  root: './',
+  publicDir: 'attached_assets',
 });

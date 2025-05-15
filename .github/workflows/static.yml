@@ -39,10 +39,14 @@ jobs:
         run: npm install
       - name: Build for GitHub Pages
         run: |
-          # Build using GitHub Pages specific config
-          npx vite build --config vite.github.config.js
+          # Build using regular build
+          npm run build
+          # Copy static files for GitHub Pages
+          cp -r dist/public/* dist/ || cp -r dist/client/* dist/ || true
+          # Create a CNAME file if you have a custom domain
+          # echo "your-domain.com" > dist/CNAME
           # Create 404 page for client-side routing
-          cp dist/index.html dist/404.html
+          cp dist/index.html dist/404.html || true
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
