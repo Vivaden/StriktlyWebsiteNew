@@ -62,6 +62,7 @@ const PricingTier: React.FC<PricingTierProps> = ({
       <Button 
         variant={isPopular ? "default" : "outline"} 
         className="mt-6 w-full" 
+        animation={isPopular ? "pulse" : "bounce"}
         asChild
       >
         <Link href={ctaLink}>{cta}</Link>
