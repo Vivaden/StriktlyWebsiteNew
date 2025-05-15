@@ -112,8 +112,6 @@ export const en = {
   'contact.feature2.description': 'Our experts are always available to help you succeed.',
   'contact.cta.primary': 'Book a Demo',
   'contact.cta.secondary': 'View Pricing',
-  
-  // Contact Form
   'contact.form.title': 'Contact Us',
   'contact.form.name': 'Name',
   'contact.form.email': 'Email',
@@ -121,6 +119,10 @@ export const en = {
   'contact.form.message': 'Message',
   'contact.form.submit': 'Send Message',
   'contact.form.submitting': 'Sending...',
+  'contact.toast.success.title': 'Message sent!',
+  'contact.toast.success.description': 'We\'ll get back to you as soon as possible.',
+  'contact.toast.error.title': 'Error sending message',
+  'contact.toast.error.description': 'Please try again later or contact us directly.',
   
   // Footer
   'footer.copyright': '© 2025 Striktly. All rights reserved.',

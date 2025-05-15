@@ -112,8 +112,6 @@ export const nl = {
   'contact.feature2.description': 'Onze experts staan altijd klaar om u te helpen slagen.',
   'contact.cta.primary': 'Demo Aanvragen',
   'contact.cta.secondary': 'Prijzen Bekijken',
-  
-  // Contact Form
   'contact.form.title': 'Neem Contact Op',
   'contact.form.name': 'Naam',
   'contact.form.email': 'E-mail',
@@ -121,6 +119,10 @@ export const nl = {
   'contact.form.message': 'Bericht',
   'contact.form.submit': 'Bericht Verzenden',
   'contact.form.submitting': 'Verzenden...',
+  'contact.toast.success.title': 'Bericht verzonden!',
+  'contact.toast.success.description': 'We nemen zo snel mogelijk contact met u op.',
+  'contact.toast.error.title': 'Fout bij het verzenden van bericht',
+  'contact.toast.error.description': 'Probeer het later opnieuw of neem direct contact met ons op.',
   
   // Footer
   'footer.copyright': '© 2025 Striktly. Alle rechten voorbehouden.',
