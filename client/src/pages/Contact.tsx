@@ -180,7 +180,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium text-gray-900">{texts.phone}</h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">+3233048040</p>
                     </div>
                   </div>
                   
@@ -190,8 +190,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-medium text-gray-900">{texts.email}</h3>
-                      <p className="text-gray-600">info@striktly.com</p>
-                      <p className="text-gray-600">support@striktly.com</p>
+                      <p className="text-gray-600">support@striktlysoftware.com</p>
                     </div>
                   </div>
                 </div>
