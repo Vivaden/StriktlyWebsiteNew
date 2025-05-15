@@ -159,10 +159,10 @@ const ContactCTA = () => {
               </div>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button size="lg" asChild animation="glow">
+              <Button size="lg" asChild animation="pulse">
                 <Link href="/contact">{t.ctaPrimary}</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild animation="bounce">
+              <Button size="lg" variant="default" asChild animation="pulse">
                 <Link href="/pricing">{t.ctaSecondary}</Link>
               </Button>
             </div>

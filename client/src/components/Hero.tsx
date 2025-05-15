@@ -25,10 +25,10 @@ const Hero = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button size="lg" asChild animation="glow">
+              <Button size="lg" asChild animation="pulse">
                 <Link href="/contact">{t('hero.cta.primary')}</Link>
               </Button>
-              <Button size="lg" variant="outline" asChild animation="bounce">
+              <Button size="lg" variant="default" asChild animation="pulse">
                 <Link href="/pricing">{t('hero.cta.secondary')}</Link>
               </Button>
             </div>
