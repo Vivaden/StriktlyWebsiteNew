@@ -24,10 +24,10 @@ const Hero = () => {
             </div>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Button size="lg" asChild>
-                <Link href="/pricing">Start Free Trial</Link>
+                <Link href="/contact">Book a Demo</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <Link href="/contact">Book a Demo</Link>
+                <Link href="/pricing">View Pricing</Link>
               </Button>
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-500">

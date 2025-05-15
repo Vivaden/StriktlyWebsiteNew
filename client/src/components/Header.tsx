@@ -60,7 +60,7 @@ const Header = () => {
               <Link href="/contact">Sign In</Link>
             </Button>
             <Button asChild>
-              <Link href="/pricing">Start Free Trial</Link>
+              <Link href="/contact">Book a Demo</Link>
             </Button>
           </div>
           <div className="md:hidden flex items-center">

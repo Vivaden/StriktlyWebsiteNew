@@ -87,7 +87,7 @@ const HowItWorks = () => {
           
           <div className="mt-10">
             <Button size="lg" asChild>
-              <Link href="/pricing">Get Started Today</Link>
+              <Link href="/contact">Book a Demo</Link>
             </Button>
           </div>
         </motion.div>

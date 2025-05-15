@@ -237,10 +237,10 @@ const Features = () => {
               <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">Join thousands of businesses that have streamlined their invoice processes with Striktly.</p>
               <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                 <Button size="lg" asChild>
-                  <Link href="/pricing">Start Free Trial</Link>
+                  <Link href="/contact">Book a Demo</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="/contact">Schedule a Demo</Link>
+                  <Link href="/pricing">View Pricing</Link>
                 </Button>
               </div>
             </motion.div>
