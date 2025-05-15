@@ -1,8 +1,11 @@
-name: Deploy to GitHub Pages
+# This file is being saved but will be inactive
+# We're using static.yml as our primary workflow file
+# Keeping this as a reference or backup
+
+name: Backup Deploy Config
 
 on:
-  push:
-    branches: [ main ]
+  # This workflow won't run automatically
   workflow_dispatch:
 
 permissions:
@@ -23,31 +26,23 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-      - name: Build frontend only
-        run: |
-          # Modify vite config temporarily to build only the frontend for GitHub Pages
-          cp vite.config.ts vite.config.ts.bak
-          sed -i 's/"dist\/public"/"dist"/g' vite.config.ts
-          # Build the frontend
-          npm run build
-          # Restore original vite config
-          mv vite.config.ts.bak vite.config.ts
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+      - name: Build
+        run: npm run build
       - name: Create 404 redirect
-        run: cp dist/index.html dist/404.html
+        run: cp dist/client/index.html dist/client/404.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: './dist'
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          path: './dist/client'
+  
+  # Deployment job disabled
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v2

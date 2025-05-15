@@ -39,12 +39,17 @@ jobs:
         run: npm install
       - name: Build
         run: |
-          # Temporarily modify the build output directory
-          NODE_ENV=production npx vite build --outDir=dist
+          # Build using the existing build script
+          npm run build
+          # Copy files for GitHub Pages
+          mkdir -p dist
+          cp -r dist/public/* dist/ || cp -r dist/client/* dist/ || true
+          # Create 404 page for client-side routing
+          cp dist/index.html dist/404.html || true
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v2
         with:
           path: './dist'
       - name: Deploy to GitHub Pages
