@@ -5,6 +5,7 @@ export const en = {
   'nav.pricing': 'Pricing',
   'nav.faq': 'FAQ',
   'nav.contact': 'Contact',
+  'nav.signin': 'Sign In',
   'cta.book_demo': 'Book a Demo',
   
   // Hero section
@@ -123,6 +124,25 @@ export const en = {
   
   // Footer
   'footer.copyright': '© 2025 Striktly. All rights reserved.',
+  'footer.tagline': 'Fast and low-cost PEPPOL compliance for your business.',
+  'footer.product': 'Product',
+  'footer.features': 'Features',
+  'footer.pricing': 'Pricing',
+  'footer.integrations': 'Integrations',
+  'footer.updates': 'Updates',
+  'footer.resources': 'Resources',
+  'footer.documentation': 'Documentation',
+  'footer.guides': 'Guides',
+  'footer.faq': 'FAQ',
+  'footer.support': 'Support',
+  'footer.company': 'Company',
+  'footer.about': 'About',
+  'footer.blog': 'Blog',
+  'footer.careers': 'Careers',
+  'footer.contact': 'Contact',
+  'footer.privacy': 'Privacy Policy',
+  'footer.terms': 'Terms of Service',
+  'footer.cookies': 'Cookie Policy',
   
   // Language
   'language': 'Language',

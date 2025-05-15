@@ -5,6 +5,7 @@ export const nl = {
   'nav.pricing': 'Prijzen',
   'nav.faq': 'FAQ',
   'nav.contact': 'Contact',
+  'nav.signin': 'Inloggen',
   'cta.book_demo': 'Demo Aanvragen',
   
   // Hero section
@@ -123,6 +124,25 @@ export const nl = {
   
   // Footer
   'footer.copyright': '© 2025 Striktly. Alle rechten voorbehouden.',
+  'footer.tagline': 'Snelle en betaalbare PEPPOL-compliance voor uw bedrijf.',
+  'footer.product': 'Product',
+  'footer.features': 'Functies',
+  'footer.pricing': 'Prijzen',
+  'footer.integrations': 'Integraties',
+  'footer.updates': 'Updates',
+  'footer.resources': 'Bronnen',
+  'footer.documentation': 'Documentatie',
+  'footer.guides': 'Handleidingen',
+  'footer.faq': 'FAQ',
+  'footer.support': 'Ondersteuning',
+  'footer.company': 'Bedrijf',
+  'footer.about': 'Over ons',
+  'footer.blog': 'Blog',
+  'footer.careers': 'Vacatures',
+  'footer.contact': 'Contact',
+  'footer.privacy': 'Privacybeleid',
+  'footer.terms': 'Servicevoorwaarden',
+  'footer.cookies': 'Cookiebeleid',
   
   // Language
   'language': 'Taal',

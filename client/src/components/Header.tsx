@@ -61,7 +61,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <LanguageSelector />
             <Button variant="outline" className="hidden md:inline-flex" asChild>
-              <Link href="/contact">Sign In</Link>
+              <Link href="/contact">{t('nav.signin')}</Link>
             </Button>
             <Button asChild>
               <Link href="/contact">{t('cta.book_demo')}</Link>
