@@ -23,6 +23,7 @@ const containerVariants = {
 };
 
 const USPSection = () => {
+  const { t } = useLanguage();
   return (
     <section className="py-16 md:py-24 bg-white" id="features">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -34,7 +35,7 @@ const USPSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Why businesses choose Striktly
+            {t('usp.title')}
           </motion.h2>
           <motion.p 
             className="text-xl text-gray-600 max-w-3xl mx-auto"
@@ -43,7 +44,7 @@ const USPSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Our PEPPOL solution brings simplicity and efficiency to your invoice management process.
+            {t('usp.subtitle')}
           </motion.p>
         </div>
         
@@ -57,45 +58,45 @@ const USPSection = () => {
           {/* USP 1 */}
           <FeatureCard 
             icon={<Zap />}
-            title="Fast and Low-Cost Compliance"
-            description="Get PEPPOL-compliant within minutes at a fraction of the cost of traditional solutions."
-            linkText="Learn more"
+            title={t('usp.card1.title')}
+            description={t('usp.card1.description')}
+            linkText={t('usp.learn.more')}
             linkUrl="/features"
           />
 
           {/* USP 2 */}
           <FeatureCard 
             icon={<ClipboardCopy />}
-            title="No Workflow Changes"
-            description="Keep your existing processes intact. Striktly adapts to how you work, not the other way around."
-            linkText="Learn more"
+            title={t('usp.card2.title')}
+            description={t('usp.card2.description')}
+            linkText={t('usp.learn.more')}
             linkUrl="/features"
           />
 
           {/* USP 3 */}
           <FeatureCard 
             icon={<Layers />}
-            title="Unified Document Management"
-            description="All your invoices and documents managed in one intuitive platform for maximum efficiency."
-            linkText="Learn more"
+            title={t('usp.card3.title')}
+            description={t('usp.card3.description')}
+            linkText={t('usp.learn.more')}
             linkUrl="/features"
           />
 
           {/* USP 4 */}
           <FeatureCard 
             icon={<ServerCog />}
-            title="Automatic Accountant Export"
-            description="Seamlessly export your documents to your accountant in their preferred format, saving time and reducing errors."
-            linkText="Learn more"
+            title={t('usp.card4.title')}
+            description={t('usp.card4.description')}
+            linkText={t('usp.learn.more')}
             linkUrl="/features"
           />
 
           {/* USP 5 */}
           <FeatureCard 
             icon={<LifeBuoy />}
-            title="Unlimited Support"
-            description="Access to our expert support team whenever you need assistance, with no limits on inquiries or consultations."
-            linkText="Learn more"
+            title={t('usp.card5.title')}
+            description={t('usp.card5.description')}
+            linkText={t('usp.learn.more')}
             linkUrl="/features"
           />
 
@@ -104,10 +105,10 @@ const USPSection = () => {
             <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mb-6">
               <Info className="h-6 w-6 text-white" />
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-white">Need more information?</h3>
-            <p className="text-white/90 flex-grow mb-4">Discover how Striktly can be tailored to your specific business needs with a personalized demo.</p>
+            <h3 className="text-xl font-semibold mb-3 text-white">{t('usp.info.title')}</h3>
+            <p className="text-white/90 flex-grow mb-4">{t('usp.info.description')}</p>
             <Link href="/contact" className="text-white font-medium flex items-center bg-white/20 py-2 px-4 rounded-lg hover:bg-white/30 transition w-fit">
-              Schedule a Demo
+              {t('usp.info.cta')}
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
               </svg>
