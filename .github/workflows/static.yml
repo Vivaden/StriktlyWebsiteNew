@@ -37,15 +37,12 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Build
+      - name: Build for GitHub Pages
         run: |
-          # Build using the existing build script
-          npm run build
-          # Copy files for GitHub Pages
-          mkdir -p dist
-          cp -r dist/public/* dist/ || cp -r dist/client/* dist/ || true
+          # Build using GitHub Pages specific config
+          npx vite build --config vite.github.config.js
           # Create 404 page for client-side routing
-          cp dist/index.html dist/404.html || true
+          cp dist/index.html dist/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact

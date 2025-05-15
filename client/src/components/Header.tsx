@@ -6,6 +6,11 @@ import LanguageSelector from "./LanguageSelector";
 import { useLanguage } from "@/contexts/LanguageContext";
 import striktlyLogo from "../assets/LogoStriktlyWebsite.png";
 
+// Get the base path for the app (empty for development, '/StriktlyWebsiteNew' for GitHub Pages)
+const basePath = import.meta.env.BASE_URL.endsWith('/') 
+  ? import.meta.env.BASE_URL.slice(0, -1) 
+  : import.meta.env.BASE_URL;
+
 const Header = () => {
   const [location] = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,20 +65,20 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
+            <Link href={`${basePath}/`} className="flex items-center">
               <img src={striktlyLogo} alt="Striktly Logo" className="h-10" />
             </Link>
             <nav className="hidden md:flex ml-10 space-x-8">
-              <Link href="/" className={`${location === '/' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
+              <Link href={`${basePath}/`} className={`${location === '/' || location === basePath + '/' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
                 {t.home}
               </Link>
-              <Link href="/features" className={`${location === '/features' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
+              <Link href={`${basePath}/features`} className={`${location === '/features' || location === basePath + '/features' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
                 {t.features}
               </Link>
-              <Link href="/pricing" className={`${location === '/pricing' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
+              <Link href={`${basePath}/pricing`} className={`${location === '/pricing' || location === basePath + '/pricing' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
                 {t.pricing}
               </Link>
-              <Link href="/contact" className={`${location === '/contact' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
+              <Link href={`${basePath}/contact`} className={`${location === '/contact' || location === basePath + '/contact' ? 'text-primary' : 'text-gray-700'} hover:text-primary font-medium`}>
                 {t.contact}
               </Link>
             </nav>
@@ -81,7 +86,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <LanguageSelector />
             <Button asChild animation="pulse" variant="default">
-              <Link href="/contact">{t.bookDemo}</Link>
+              <Link href={`${basePath}/contact`}>{t.bookDemo}</Link>
             </Button>
           </div>
           <div className="md:hidden flex items-center">

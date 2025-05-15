@@ -1,22 +1,31 @@
-// Special config file for GitHub Pages deployment
-
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
+// vite.github.config.js - Used specifically for GitHub Pages deployment
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import path from 'path';
 
 export default defineConfig({
-  plugins: [react()],
-  base: '/StriktlyWebsiteNew/', // Update this to your repo name
+  plugins: [
+    react(),
+    tailwindcss()
+  ],
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true
+  },
   resolve: {
     alias: {
-      "@": path.resolve(process.cwd(), "client", "src"),
-      "@shared": path.resolve(process.cwd(), "shared"),
-      "@assets": path.resolve(process.cwd(), "attached_assets"),
-    },
+      '@': path.resolve(__dirname, './client/src'),
+      '@assets': path.resolve(__dirname, './attached_assets'),
+      '@components': path.resolve(__dirname, './client/src/components'),
+      '@contexts': path.resolve(__dirname, './client/src/contexts'),
+      '@hooks': path.resolve(__dirname, './client/src/hooks'),
+      '@lib': path.resolve(__dirname, './client/src/lib'),
+      '@pages': path.resolve(__dirname, './client/src/pages'),
+      '@shared': path.resolve(__dirname, './shared'),
+      '@translations': path.resolve(__dirname, './client/src/translations')
+    }
   },
-  root: path.resolve(process.cwd(), "client"),
-  build: {
-    outDir: path.resolve(process.cwd(), "dist"),
-    emptyOutDir: true,
-  },
+  // For GitHub Pages, add a base path
+  base: '/StriktlyWebsiteNew/'
 });
