@@ -1,0 +1,87 @@
+Build a modern, visually appealing website for a SaaS product called Striktly. Striktly is a PEPPOL solution for managing incoming and outgoing invoices, targeted at businesses seeking fast, low-cost PEPPOL compliance. The website should be focused on conversion and clearly communicate Striktly’s unique selling points:
+
+Fast and low-cost PEPPOL compliancy
+
+No changes to the customer’s current workflow
+
+All documents managed in one platform
+
+Automatic export to the accountant
+
+Unlimited support
+
+Website requirements:
+
+Homepage:
+
+Hero section with a strong headline and subheadline that communicates Striktly’s value proposition.
+
+Prominent call-to-action (CTA) buttons (e.g., "Start Free Trial", "Book a Demo").
+
+Visuals or illustrations that convey ease of use and automation.
+
+Section highlighting the five USPs above, each with an icon and a short description.
+
+Short explanation of how Striktly works (step-by-step or diagram).
+
+Testimonials or trust signals (e.g., customer logos, security badges).
+
+FAQ section addressing common questions about PEPPOL and invoicing.
+
+Features page:
+
+Detailed breakdown of features, organized by benefit (compliance, workflow integration, document management, automation, support).
+
+Use bullet points, icons, and screenshots/mockups for clarity.
+
+Pricing page:
+
+Section introducing pricing philosophy (transparent, no hidden fees).
+
+Embed a Stripe pricing table using the Stripe script (include a placeholder for the embed code).
+
+Highlight any free trial or money-back guarantee if available.
+
+Navigation:
+
+Sticky navigation bar with links to Home, Features, Pricing, FAQ, Contact.
+
+Prominent CTA in the header (e.g., "Start Free Trial").
+
+Footer:
+
+Contact information, social media links, legal/privacy links.
+
+Design:
+
+Clean, modern, and professional SaaS look (white background, accent color for CTAs, easy-to-read fonts).
+
+Responsive and mobile-friendly layout.
+
+Use visually engaging elements (icons, illustrations, subtle animations) to enhance appeal.
+
+Stripe Integration:
+
+On the Pricing page, leave a placeholder comment where the Stripe pricing table script will be embedded.
+
+Instructions for Replit:
+
+Generate all necessary HTML, CSS, and JavaScript for a multi-page website.
+
+Use semantic HTML for accessibility and SEO.
+
+For the Pricing page, include a placeholder comment like <!-- Stripe Pricing Table Embed Here --> for easy integration later.
+
+Ensure the site is focused on driving signups or demo requests.
+
+Example of Pricing Page Placeholder for Stripe:
+
+xml
+<!-- Stripe Pricing Table Embed Here -->
+<!-- Example: 
+<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+<stripe-pricing-table
+  pricing-table-id="your-pricing-table-id"
+  publishable-key="your-publishable-key">
+</stripe-pricing-table>
+-->
