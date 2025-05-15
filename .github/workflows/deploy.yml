@@ -1,0 +1,53 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build frontend only
+        run: |
+          # Modify vite config temporarily to build only the frontend for GitHub Pages
+          cp vite.config.ts vite.config.ts.bak
+          sed -i 's/"dist\/public"/"dist"/g' vite.config.ts
+          # Build the frontend
+          npm run build
+          # Restore original vite config
+          mv vite.config.ts.bak vite.config.ts
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Create 404 redirect
+        run: cp dist/index.html dist/404.html
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: './dist'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
