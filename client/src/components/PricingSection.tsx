@@ -143,7 +143,8 @@ const PricingSection = () => {
         'Advanced document management',
         'Advanced integrations',
         '24/7 priority support',
-        'Dedicated account manager'
+        'Dedicated account manager',
+        'Multiple entities in a single platform'
       ]
     },
     nl: {
@@ -166,7 +167,8 @@ const PricingSection = () => {
         'Geavanceerd documentbeheer',
         'Geavanceerde integraties',
         '24/7 prioriteit ondersteuning',
-        'Toegewijde accountmanager'
+        'Toegewijde accountmanager',
+        'Mogelijkheid tot meerdere entiteiten in 1 platform'
       ]
     }
   };
