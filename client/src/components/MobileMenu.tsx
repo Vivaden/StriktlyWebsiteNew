@@ -3,6 +3,11 @@ import { Link, useLocation } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSelector from "./LanguageSelector";
 
+// Get the base path for the app (empty for development, '/StriktlyWebsiteNew' for GitHub Pages)
+const basePath = import.meta.env.BASE_URL.endsWith('/') 
+  ? import.meta.env.BASE_URL.slice(0, -1) 
+  : import.meta.env.BASE_URL;
+
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
@@ -44,29 +49,29 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           <LanguageSelector />
         </div>
         <Link 
-          href="/" 
-          className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
+          href={`${basePath}/`} 
+          className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/' || location === basePath + '/' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
           {t.home}
         </Link>
         <Link 
-          href="/features" 
-          className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/features' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
+          href={`${basePath}/features`} 
+          className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/features' || location === basePath + '/features' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
           {t.features}
         </Link>
         <Link 
-          href="/pricing" 
-          className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/pricing' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
+          href={`${basePath}/pricing`} 
+          className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/pricing' || location === basePath + '/pricing' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
           {t.pricing}
         </Link>
         <Link 
-          href="/contact" 
-          className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/contact' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
+          href={`${basePath}/contact`} 
+          className={`block px-3 py-2 rounded-md text-base font-medium ${location === '/contact' || location === basePath + '/contact' ? 'text-primary bg-gray-50' : 'text-gray-700'} hover:text-primary hover:bg-gray-50`}
           onClick={onClose}
         >
           {t.contact}

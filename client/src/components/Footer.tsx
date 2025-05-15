@@ -2,6 +2,11 @@ import { Link } from "wouter";
 import { useLanguage } from "@/contexts/LanguageContext";
 import striktlyLogo from "../assets/LogoStriktlyWebsite.png";
 
+// Get the base path for the app (empty for development, '/StriktlyWebsiteNew' for GitHub Pages)
+const basePath = import.meta.env.BASE_URL.endsWith('/') 
+  ? import.meta.env.BASE_URL.slice(0, -1) 
+  : import.meta.env.BASE_URL;
+
 const Footer = () => {
   const { language } = useLanguage();
   
@@ -58,18 +63,18 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-medium mb-4">{t.navigation}</h3>
             <ul className="space-y-3">
-              <li><Link href="/" className="text-gray-400 hover:text-white">{t.home}</Link></li>
-              <li><Link href="/features" className="text-gray-400 hover:text-white">{t.features}</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-white">{t.pricing}</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-white">{t.contact}</Link></li>
+              <li><Link href={`${basePath}/`} className="text-gray-400 hover:text-white">{t.home}</Link></li>
+              <li><Link href={`${basePath}/features`} className="text-gray-400 hover:text-white">{t.features}</Link></li>
+              <li><Link href={`${basePath}/pricing`} className="text-gray-400 hover:text-white">{t.pricing}</Link></li>
+              <li><Link href={`${basePath}/contact`} className="text-gray-400 hover:text-white">{t.contact}</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-medium mb-4">{t.legal}</h3>
             <ul className="space-y-3">
-              <li><Link href="/privacy" className="text-gray-400 hover:text-white">{t.privacy}</Link></li>
-              <li><Link href="/terms" className="text-gray-400 hover:text-white">{t.terms}</Link></li>
-              <li><Link href="/cookies" className="text-gray-400 hover:text-white">{t.cookies}</Link></li>
+              <li><Link href={`${basePath}/privacy`} className="text-gray-400 hover:text-white">{t.privacy}</Link></li>
+              <li><Link href={`${basePath}/terms`} className="text-gray-400 hover:text-white">{t.terms}</Link></li>
+              <li><Link href={`${basePath}/cookies`} className="text-gray-400 hover:text-white">{t.cookies}</Link></li>
             </ul>
           </div>
         </div>
