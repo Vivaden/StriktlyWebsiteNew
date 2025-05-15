@@ -231,6 +231,7 @@ const ContactCTA = () => {
                   type="submit" 
                   className="w-full"
                   animation="pulse"
+                  variant="default"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? t.formSubmitting : t.formSubmit}

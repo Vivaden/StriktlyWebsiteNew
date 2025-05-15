@@ -292,7 +292,8 @@ const Contact = () => {
                       <Button 
                         type="submit" 
                         className="w-full"
-                        animation="glow"
+                        animation="pulse"
+                        variant="default"
                         disabled={isSubmitting}
                       >
                         {isSubmitting ? texts.formSending : texts.formSend}
